@@ -1,0 +1,25 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint", "react", "react-hooks"],
+    "extends": [
+      "airbnb",
+      "airbnb-typescript",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2021,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "project": "./tsconfig.json"
+    },
+    "rules": {
+      "import/prefer-default-export": "off",
+      "react/jsx-props-no-spreading": "off",
+      "@typescript-eslint/no-use-before-define": "off",
+      "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+    }
+  }
+  
