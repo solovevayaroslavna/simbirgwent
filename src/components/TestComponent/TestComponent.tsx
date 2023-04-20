@@ -1,15 +1,10 @@
-import { Card, Typography, styled} from "@material-ui/core";
+import {Typography} from "@material-ui/core";
+import CardStyled from "./CardStyled";
 
-const MyCard =styled(Card)({
-   backgroundColor:'blue',
-   color:'#fff',
-   width:'20%',
-   height:'20%'
-})
 export const TestComponent =()=>{
-   return <MyCard>
+   return <CardStyled>
       <Typography variant="h6" component="div" >Card</Typography>      
-   </MyCard>
+   </CardStyled>
 }
 
    
