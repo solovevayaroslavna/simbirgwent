@@ -1,0 +1,6 @@
+.game-card-area {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    background-image: url('../../../assets/battlefield/gameCardArea-test.jpeg');
+    background-size:cover;
+  }

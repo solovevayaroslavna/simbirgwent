@@ -1,0 +1,6 @@
+.cards-panel {
+    grid-row: 2/ 3;
+    grid-column: 2 / 3;
+    background-image: url('../../../assets/battlefield/cardsPanel-test.jpeg');
+    background-size:cover;
+  }

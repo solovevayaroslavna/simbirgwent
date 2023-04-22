@@ -1,0 +1,13 @@
+.common-game-area {
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 1px;
+  height: 100vh;
+  width: 80%;
+  border: 1px solid black;
+  border-left: 1px solid black;
+  background-color: #8B4513; 
+  box-sizing: border-box;
+  float: left;
+}
