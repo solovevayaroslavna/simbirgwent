@@ -1,6 +1,5 @@
 import React from 'react';
-import OpponentsPanel from '../opponentsPanel/opponentsPanel';
-import CommonGameArea from '../commonGameArea/commonGameArea';
+import { OpponentsPanel, CommonGameArea } from '../index';
 import './App.css';
 
 function App() {

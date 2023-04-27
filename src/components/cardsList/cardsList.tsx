@@ -13,6 +13,7 @@ function CardsList() {
       <div className="card" />
       <div className="card" />
       <div className="card" />
+      <div className="card" />
     </div>
   );
 }
