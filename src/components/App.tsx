@@ -1,4 +1,5 @@
 import React from 'react';
+import { TestComponent } from './TestComponent';
 import './App.css';
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
+          <TestComponent />
           Edit
           {' '}
           <code>src/App.tsx</code>
