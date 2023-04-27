@@ -1,7 +1,3 @@
-import OpponentsPanel from './opponentsPanel/opponentsPanel';
-import CommonGameArea from './commonGameArea/commonGameArea';
+import App from './App/App';
 
-export {
-  OpponentsPanel,
-  CommonGameArea,
-};
+export default App;
