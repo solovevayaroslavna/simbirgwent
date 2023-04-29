@@ -1,28 +1,12 @@
 import React from 'react';
-import { TestComponent } from './TestComponent';
+import { OpponentsPanel, CommonGameArea } from './index';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          <TestComponent />
-          Edit
-          {' '}
-          <code>src/App.tsx</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React // comment to test git rules
-        </a>
-      </header>
+    <div>
+      <OpponentsPanel />
+      <CommonGameArea />
     </div>
   );
 }
