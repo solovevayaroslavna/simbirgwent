@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CostIndicatorStyled } from './CardComponentsStyled';
+import { IndicatorStyled } from './CardComponentsStyled';
 
 CostIndicator.propTypes = {
   children: PropTypes.node.isRequired,
 };
 export function CostIndicator({ children }) {
   return (
-    <CostIndicatorStyled>
+    <IndicatorStyled>
       <div>
         {children}
       </div>
-    </CostIndicatorStyled>
+    </IndicatorStyled>
   );
 }

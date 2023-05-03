@@ -15,6 +15,7 @@ function App() {
               image={card.image}
               text={card.text}
               header={card.header}
+              power={card.power}
             />
           ))}
         </p>
