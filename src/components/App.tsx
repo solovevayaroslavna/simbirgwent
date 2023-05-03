@@ -1,27 +1,23 @@
 import React from 'react';
-import { TestComponent } from './TestComponent';
 import './App.css';
+import createCards from '../utils/Images.utils';
+import { Card } from './Card';
 
 function App() {
+  const cards = createCards();
   return (
     <div className="App">
       <header className="App-header">
         <p>
-          <TestComponent />
-          Edit
-          {' '}
-          <code>src/App.tsx</code>
-          {' '}
-          and save to reload.
+          {cards.map((card) => (
+            <Card
+              key={card.id}
+              image={card.image}
+              text={card.text}
+              header={card.header}
+            />
+          ))}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React // comment to test git rules
-        </a>
       </header>
     </div>
   );
