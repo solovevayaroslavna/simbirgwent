@@ -1,2 +1,1 @@
-export { CommonGameArea } from './commonGameArea';
-export { OpponentsPanel } from './opponentsPanel';
+export { MainPage } from './mainPage';

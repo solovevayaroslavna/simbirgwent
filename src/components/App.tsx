@@ -1,12 +1,11 @@
 import React from 'react';
-import { OpponentsPanel, CommonGameArea } from './index';
+import { MainPage } from './index';
 import './App.css';
 
 function App() {
   return (
     <div>
-      <OpponentsPanel />
-      <CommonGameArea />
+      <MainPage />
     </div>
   );
 }
