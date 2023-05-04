@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-import { MainPage } from './components/MainPage';
+
+import { MainLayout } from './components/MainLayout';
 
 function App() {
   return (
-    <div>
-      <MainPage />
-    </div>
+    <MainLayout />
   );
 }
 
