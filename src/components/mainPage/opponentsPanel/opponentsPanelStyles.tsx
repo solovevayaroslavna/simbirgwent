@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { colors } from '../../theme/variables';
-import cardExample from '../assets/cards/card-example.png';
+import { colors } from '../../../theme/variables';
+import cardExample from '../../../assets/cards/card-example.png';
 
 export const OpponentPanel = styled.div`
   height: 100vh;

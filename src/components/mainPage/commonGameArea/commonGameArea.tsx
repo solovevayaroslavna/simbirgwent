@@ -1,8 +1,8 @@
 import React from 'react';
-import { GameArea } from '../gameArea/index';
-import { GameCardArea } from '../gameCardArea/index';
-import { CardsPanel } from '../cardsPanel/index';
-import { CardsList } from '../cardsList/index';
+import { GameArea } from './gameArea';
+import { GameCardArea } from './gameCardArea';
+import { CardsPanel } from './cardsPanel';
+import { CardsList } from './cardsList/index';
 import { CommonGameAreaWrapper } from './commonGameAreaStyles';
 
 export function CommonGameArea() {

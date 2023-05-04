@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import gameCardAreaImg from '../assets/battlefield/gameCardArea-test.jpeg';
+import gameCardAreaImg from '../../../../assets/battlefield/gameCardArea-test.jpeg';
 
 export const GameCardAreaWrapper = styled.div`
   grid-row: 1 / 2;
