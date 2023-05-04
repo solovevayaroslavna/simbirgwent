@@ -8,9 +8,7 @@ CostIndicator.propTypes = {
 export function CostIndicator({ children }) {
   return (
     <IndicatorStyled>
-      <div>
-        {children}
-      </div>
+      {children}
     </IndicatorStyled>
   );
 }

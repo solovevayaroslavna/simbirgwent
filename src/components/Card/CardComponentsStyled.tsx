@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Card, Typography } from '@material-ui/core';
-import '../../theme/test.css';
+import '../../theme/colors.css';
 
 export const IndicatorStyled = styled.div<{ Mytop?: string }>`
 position: absolute;
@@ -9,8 +9,8 @@ justify-content: center;
 align-items:center;
 left: 0%; 
 top: ${(props) => (props.Mytop ? props.Mytop : '0%')};
-height: 15%;
-width: calc(15*15%/8);
+height: 15vh;
+width: 15vh;
 font-size:calc(100vh/15);
 border-radius: 50%;
 background-color: var(--color-text-main);
@@ -24,8 +24,8 @@ justify-content: center;
 align-items:center;
 left: 0%; 
 top: 25%;
-height: 15%;
-width: calc(15*15%/8);
+height: 15vh;
+width: 15vh;
 font-size:calc(100vh/15);
 background-color: var(--background-type);
 border-radius: 50%;
