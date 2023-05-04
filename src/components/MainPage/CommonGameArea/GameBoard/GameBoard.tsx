@@ -1,5 +1,5 @@
 import React from 'react';
-import { GameBoardSide } from './GameBoardPart';
+import { GameBoardPart } from './GameBoardPart';
 import { GameAreaWrapper } from './GameAreaWrapper';
 
 const elementsEnemy = [
@@ -17,8 +17,8 @@ export function GameBoard() {
   // TODO добавить разделитель
   return (
     <GameAreaWrapper>
-      <GameBoardSide elements={elementsEnemy} />
-      <GameBoardSide elements={elementsFriendly} />
+      <GameBoardPart elements={elementsEnemy} />
+      <GameBoardPart elements={elementsFriendly} />
     </GameAreaWrapper>
   );
 }

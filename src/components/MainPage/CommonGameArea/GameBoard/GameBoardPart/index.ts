@@ -1,1 +1,1 @@
-export * from './GameBoardSide';
+export * from './GameBoardPart';

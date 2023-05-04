@@ -1,9 +1,9 @@
 import React from 'react';
 import { Circle } from './Circle';
 import { CardsRow } from './CardsRow';
-import { GameBoardProps } from './GameBoardSide.types';
+import { GameBoardPartProps } from './GameBoardPart.types';
 
-export function GameBoardSide({ elements }: GameBoardProps) {
+export function GameBoardPart({ elements }: GameBoardPartProps) {
   return (
     <>
       {elements.map((element) => (

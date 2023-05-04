@@ -3,6 +3,6 @@ export interface Element {
   value: number;
 }
 
-export interface GameBoardProps {
+export interface GameBoardPartProps {
   elements: Element[];
 }
