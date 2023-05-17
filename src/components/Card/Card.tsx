@@ -1,6 +1,7 @@
 import { Box } from '@material-ui/core';
 import React from 'react';
-import PropTypes from 'prop-types';
+import '../../theme/colors.css';
+import TypeOfArmy from './TypeOfArmy';
 import { CostIndicator } from './CostIndicator';
 import CartDescription from './CardDescription';
 import {
@@ -9,14 +10,14 @@ import {
 import img from '../../images/cards/bow.svg';
 import img2 from '../../images/cards/support.svg';
 
-Card.propTypes = {
-  header: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  power: PropTypes.number.isRequired,
-};
+interface CardProps {
+  header: string,
+  image: string,
+  text: string,
+  power: number
+}
 
-export function Card(props) {
+export function Card(props : CardProps) {
   const {
     image, header, text, power,
   } = props;
@@ -29,11 +30,12 @@ export function Card(props) {
     >
 
       <CardBody backgroundImage={image}>
+        <TypeOfArmy color="var(--color-type-something)" />
         <CostIndicator>{power}</CostIndicator>
         <TypeIndicatorStyled>
           <ImgContainer backgroundImage={img} />
         </TypeIndicatorStyled>
-        <IndicatorStyled Mytop="45%">
+        <IndicatorStyled myTop="45%">
           <ImgContainer backgroundImage={img2} />
         </IndicatorStyled>
       </CardBody>

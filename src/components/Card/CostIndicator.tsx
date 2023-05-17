@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { IndicatorStyled } from './CardComponentsStyled';
 
-CostIndicator.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-export function CostIndicator({ children }) {
+interface CostIndicatorProps {
+  children : React.ReactNode,
+}
+export function CostIndicator({ children }:CostIndicatorProps) {
   return (
     <IndicatorStyled>
       {children}
