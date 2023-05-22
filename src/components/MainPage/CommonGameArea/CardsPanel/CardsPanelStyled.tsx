@@ -6,5 +6,4 @@ export const CardsPanelArea = styled.div`
   grid-column: 2 / 3;
   background-image: url(${cardsPanelImage});
   background-size: cover;
-  
 `;

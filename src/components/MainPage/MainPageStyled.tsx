@@ -11,7 +11,4 @@ min-height: 10%;
 min-width: 10%;
 aspect-ratio: 20 / 9;
 margin: auto; 
-// // display: flex;
-// justify-content: center;
-// align-items: center;
 `;
