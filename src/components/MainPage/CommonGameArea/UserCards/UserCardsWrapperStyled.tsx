@@ -10,5 +10,5 @@ align-items: center;
 height: 100%;
 background-color: ${colors.cardsListBackgroundColor};
 overflow: auto;
-width: 62vw;
+// width: 20px;
 `;
