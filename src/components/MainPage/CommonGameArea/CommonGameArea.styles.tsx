@@ -6,7 +6,7 @@ export const CommonGameAreaWrapper = styled.div`
   grid-template-rows: 4fr 2fr;
   grid-template-columns: 4fr 2fr;
   height: 100%;
-  width: 80%;
+  width: 75%;
   // border: 0.001em solid ${colors.secondaryColor};
   // border-left: 0.001em solid ${colors.secondaryColor};
   background-color: ${colors.commonGameAreaBackgroundColor};
