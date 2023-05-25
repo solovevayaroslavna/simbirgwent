@@ -2,7 +2,7 @@ import React from 'react';
 import { CommonGameAreaWrapper } from './CommonGameArea.styles';
 import { CardArea } from './CardArea';
 import { UserCards } from './UserCards';
-import { CardsPanel } from './CardsPanel';
+import { RestOfDeck } from './RestOfDeck';
 import { GameBoard } from './GameBoard';
 
 export function CommonGameArea() {
@@ -11,7 +11,7 @@ export function CommonGameArea() {
       <GameBoard />
       <CardArea />
       <UserCards />
-      <CardsPanel />
+      <RestOfDeck />
     </CommonGameAreaWrapper>
   );
 }

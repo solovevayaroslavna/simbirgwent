@@ -5,7 +5,7 @@ import gameAreaBlock from '../../../../../assets/battlefield/field-item.png';
 export const CardsRow = styled.div`
   // border: 0.001em solid ${colors.secondaryColor};
   // box-shadow: 0.001vh 0.4vh 0.4vh ${colors.secondaryColor};
-  width: 100%;
+  width: 99%;
   height: 90%;
   justify-content: left;
   align-items: left;

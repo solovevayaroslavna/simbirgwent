@@ -7,5 +7,6 @@ export const GameAreaWrapper = styled.div`
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 24fr;
+  padding-top: 1vh;
   background-color: ${colors.gameAreaBackgroundColor};
 `;
