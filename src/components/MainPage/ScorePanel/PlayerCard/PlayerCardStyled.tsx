@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const EnemyStatus = styled.div`
+export const PlayerCardStyled = styled.div`
   width: 100%;
-  height: 35%;
+  height: 18%;
 `;
