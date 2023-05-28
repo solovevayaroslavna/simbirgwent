@@ -5,13 +5,21 @@ import { LeaderCard } from './LeaderCard';
 import { CenterPanel } from './CenterPanel';
 
 export function ScorePanel() {
+  const player1 = {
+    gamerName: 'Стивен',
+    desk: {
+      nameOfDeck: 'Чудовища',
+      restOfDeck: 'фыв',
+      playersLifes: 5,
+    },
+  };
   return (
     <ScorePanelStyled>
-      <PlayerCard />
       <LeaderCard />
+      <PlayerCard gamer={player1} />
       <CenterPanel />
+      <PlayerCard gamer={player1} />
       <LeaderCard />
-      <PlayerCard />
     </ScorePanelStyled>
   );
 }
