@@ -1,11 +1,11 @@
-import { Box } from '@material-ui/core';
 import React from 'react';
 import '../../theme/colors.css';
-import TypeOfArmy from './TypeOfArmy';
+
 import { CostIndicator } from './CostIndicator';
-import CartDescription from './CardDescription';
+import CardDescription from './CardDescription';
+import { IndicatorsContainer } from './IndicatorsContainer';
 import {
-  CardBody, TypeIndicatorStyled, ImgContainer, IndicatorStyled,
+  CardBody, TypeIndicatorStyled, ImgContainer, CardWrapper, AbilityStyled, TypeOfArmyStyled,
 } from './CardComponentsStyled';
 import img from '../../images/cards/bow.svg';
 import img2 from '../../images/cards/support.svg';
@@ -22,24 +22,20 @@ export function Card(props : CardProps) {
     image, header, text, power,
   } = props;
   return (
-    <Box
-      component="div"
-      sx={{
-        position: 'relative', height: '100vh', width: '53vh', border: '2px bold grey', marginBottom: '5%',
-      }}
-    >
-
+    <CardWrapper>
       <CardBody backgroundImage={image}>
-        <TypeOfArmy color="var(--color-type-something)" />
-        <CostIndicator>{power}</CostIndicator>
-        <TypeIndicatorStyled>
-          <ImgContainer backgroundImage={img} />
-        </TypeIndicatorStyled>
-        <IndicatorStyled myTop="45%">
-          <ImgContainer backgroundImage={img2} />
-        </IndicatorStyled>
+        <IndicatorsContainer>
+          <CostIndicator>{power}</CostIndicator>
+          <TypeIndicatorStyled>
+            <ImgContainer backgroundImage={img} />
+          </TypeIndicatorStyled>
+          <AbilityStyled>
+            <ImgContainer backgroundImage={img2} />
+          </AbilityStyled>
+          <TypeOfArmyStyled />
+        </IndicatorsContainer>
       </CardBody>
-      <CartDescription header={header}>{text}</CartDescription>
-    </Box>
+      <CardDescription header={header}>{text}</CardDescription>
+    </CardWrapper>
   );
 }
