@@ -15,12 +15,25 @@ export interface ICard {
 function createCards() {
   const cards:ICard[] = [];
   /* cards.push({
-    id: 1, amount: 4, ability: 1, power: 11, categor
-    y: 1, header: 'Гребанная пехтура капитана', text: 'Пожертвуйте гро
-    шик ветерану Бренны', image: `${hero1}`,
+    id: 1,
+    amount: 4,
+    ability: 1,
+    power: 11,
+    category: 1,
+    header:
+     'Гребанная пехтура капитана',
+    text: 'Пожертвуйте грошик ветерану Бренны',
+    image: `${hero1}`,
   }); */
   cards.push({
-    id: 2, amount: 2, ability: 2, power: 2, category: 1, header: 'Реданский пехотинец', text: 'Ради Реданни я пойду на все! Пока мне платят жалование', image: `${hero2}`,
+    id: 2,
+    amount: 2,
+    ability: 2,
+    power: 2,
+    category: 1,
+    header: 'Реданский пехотинец',
+    text: 'Ради Реданни я пойду на все! Пока мне платят жалование',
+    image: `${hero2}`,
   });
   return cards;
 }

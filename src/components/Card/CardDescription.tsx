@@ -11,11 +11,18 @@ function CardDescription({ header, children }: CartDescriptionProps) {
   const divRef = useRef(null);
 
   useEffect(() => {
-    const parentWidth = divRef.current.clientWidth;
-    const parentHeight = divRef.current.clientHeight;
-    const maxDimension = Math.max(parentWidth, parentHeight);
-    setFontSize(maxDimension / 15);
-  }, [divRef]);
+    const div = divRef.current;
+    const observer = new ResizeObserver((entries) => {
+      const parentWidth = entries[0].contentRect.width;
+      const parentHeight = entries[0].contentRect.height;
+      const maxDimension = Math.max(parentWidth, parentHeight);
+      setFontSize(maxDimension / 15);
+    });
+    observer.observe(div);
+    return () => {
+      observer.unobserve(div);
+    };
+  }, []);
   return (
     <CardStyled ref={divRef} fs={fontSize}>
       <HeaderStyled fs={fontSize}>{header}</HeaderStyled>

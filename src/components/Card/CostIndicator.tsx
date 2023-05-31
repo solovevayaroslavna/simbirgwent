@@ -10,11 +10,18 @@ export function CostIndicator({ children }:CostIndicatorProps) {
   const divRef = useRef(null);
 
   useEffect(() => {
-    const parentWidth = divRef.current.clientWidth;
-    const parentHeight = divRef.current.clientHeight;
-    const maxDimension = Math.max(parentWidth, parentHeight);
-    setFontSize(maxDimension / 2);
-  }, [divRef]);
+    const div = divRef.current;
+    const observer = new ResizeObserver((entries) => {
+      const parentWidth = entries[0].contentRect.width;
+      const parentHeight = entries[0].contentRect.height;
+      const maxDimension = Math.max(parentWidth, parentHeight);
+      setFontSize(maxDimension / 2);
+    });
+    observer.observe(div);
+    return () => {
+      observer.unobserve(div);
+    };
+  }, []);
 
   return (
     <IndicatorStyled ref={divRef} fs={fontSize}>

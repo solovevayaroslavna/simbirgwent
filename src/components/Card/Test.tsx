@@ -13,7 +13,7 @@ export function Test() {
       <Box
         component="div"
         sx={{
-          height: '100vh', width: '53vh', marginBottom: '5%',
+          height: '100vh', width: '53vh', marginBottom: '5%', // не добавил в отдельный компонент т.к это тестовый род контейнер
         }}
       >
         {cards.map((card) => (

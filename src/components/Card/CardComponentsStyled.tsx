@@ -12,9 +12,8 @@ export const CardWrapper = styled(Box)({
 export const IndicatorsContainerStyled = styled.div`
 position: relative;
 height: 100%;
-width: calc(15*15%/8);т.к height/width = 15/8, то для того чтобы получить ширину, такую же как высоту, нужно умножить на 8/15
-z-index:10;
-`;
+width: calc(15*15%/8);т.к height/width = 15/8, то для того чтобы получить ширину, такую же как высоту, нужно умножить на 8/15`;
+
 export const IndicatorStyled = styled.div<{ fs: number, }>`
 position: absolute;
 display: flex;
@@ -47,7 +46,7 @@ color: var(--color-text-second);
 z-index:1;
 `;
 
-export const AbilityStyled = styled.div<{ myTop?: string, }>`
+export const AbilityStyled = styled.div`
 position: absolute;
 display: flex;
 justify-content: center;
@@ -84,18 +83,18 @@ left: 10%;
 width: 80%;
 background-color: red;
 height: 90%;
-z-index-1;
 `;
 
 export const CardStyled = styled(Card)<{ fs: number, }>`
   background-color: var(--color-text-main);
+  padding 2% 0;
   color: var(--color-text-second);
   width: inherit;
   height: 20%;
   font-size: ${(props) => `${props.fs}px`};
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 `;
 
 export const HeaderStyled = styled(Typography)<{ fs: number, }>`
