@@ -12,5 +12,6 @@ export const PlayerImageStyled = styled.div`
   margin: auto 0.5em;
   width: 15vh;
   height: 15vh;
-  background-color: blue;
+  max-width: 40%;
+  max-height: 100%;
 `;

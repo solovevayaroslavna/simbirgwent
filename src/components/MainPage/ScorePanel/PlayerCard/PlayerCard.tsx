@@ -1,7 +1,7 @@
 import React from 'react';
 import { PlayerCardStyled } from './PlayerCardStyled';
 import { PlayerCardProps } from './PlayerCard.types';
-import { PlayerImage } from './PlayerCardPart';
+import { PlayerImage } from './PlayerCardImage';
 
 export function PlayerCard({ gamer }: PlayerCardProps) {
   return (
