@@ -38,7 +38,6 @@ align-items: center;
 top: 30%;
 height: 18%;
 width: 100%;// т.к height/width = 15/8, то для того чтобы получить ширину, такую же как высоту, нужно умножить на 8/15 
-font-size: calc(100vh/15);
 background-color: var(--background-type);
 border-radius: 50%;
 border : .03em solid var(--color-black);
@@ -85,21 +84,20 @@ background-color: red;
 height: 90%;
 `;
 
-export const CardStyled = styled(Card)<{ fs: number, }>`
+export const CardStyled = styled(Card)`
   background-color: var(--color-text-main);
   padding 2% 0;
   color: var(--color-text-second);
   width: inherit;
   height: 20%;
-  font-size: ${(props) => `${props.fs}px`};
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 `;
 
-export const HeaderStyled = styled(Typography)<{ fs: number, }>`
-  height: 20%;
+export const HeaderStyled = styled(Typography)`
   width: 100%;
-  font-size: ${(props) => `${props.fs}px`};
+  font-size: 1rem;
   font-weight: bold;
 `;
