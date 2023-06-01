@@ -1,11 +1,11 @@
 export type Gamer = {
   gamerName: string,
-  desk: DeskObject,
+  deck: DeckObject,
 };
 
-export type DeskObject = {
+export type DeckObject = {
   nameOfDeck: string,
-  restOfDeck: string,
+  restOfDeck: number,
   playersLifes: number,
 };
 

@@ -6,11 +6,19 @@ import { CenterPanel } from './CenterPanel';
 
 export function ScorePanel() {
   const player1 = {
-    gamerName: 'Стивен',
-    desk: {
-      nameOfDeck: 'Чудовища',
-      restOfDeck: 'фыв',
-      playersLifes: 5,
+    gamerName: 'Witch',
+    deck: {
+      nameOfDeck: 'MONSTERS',
+      restOfDeck: 9,
+      playersLifes: 2,
+    },
+  };
+  const player2 = {
+    gamerName: 'Geralt',
+    deck: {
+      nameOfDeck: 'NORTH_KINGDOM',
+      restOfDeck: 10,
+      playersLifes: 2,
     },
   };
   return (
@@ -18,7 +26,7 @@ export function ScorePanel() {
       <LeaderCard />
       <PlayerCard gamer={player1} />
       <CenterPanel />
-      <PlayerCard gamer={player1} />
+      <PlayerCard gamer={player2} />
       <LeaderCard />
     </ScorePanelStyled>
   );

@@ -1,15 +1,14 @@
 import React from 'react';
 import { PlayerInfoStyled } from './PlayerInfoStyled';
-import { PlayerCardProps } from '../PlayerCard.types';
+import { GamerInfo } from './PlayerInfo.types';
 
 export function PlayerInfo(
-  { gamer }: PlayerCardProps,
-  { children }: { children: React.ReactNode },
+  { gamerName, deсkName }: GamerInfo,
 ) {
   return (
     <PlayerInfoStyled>
-      {gamer.gamerName}
-      {children}
+      {gamerName}
+      {deсkName}
     </PlayerInfoStyled>
   );
 }
