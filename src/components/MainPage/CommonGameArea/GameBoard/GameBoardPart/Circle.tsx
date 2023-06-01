@@ -5,9 +5,10 @@ export const Circle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.8em;
+  font-size: 0.7em;
   font-weight: bold;
   background-color: ${colors.gameAreaCircleBlockBackgroundColor};
+  margin: 0em 0em 0em 0.3em;
   color: ${colors.secondaryColor};
   border-radius: 50%;
   width: 2vh;
