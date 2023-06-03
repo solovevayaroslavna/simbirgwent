@@ -10,8 +10,8 @@ export const PlayerImageStyled = styled.div`
   border-radius: 100%;
   align-items: center;
   margin: auto 0.5em;
-  width: 15vh;
-  height: 13vh;
-  max-width: 40%;
+  width: 40%;
+  height: 70%;
+  max-width: 100%;
   max-height: 100%;
 `;

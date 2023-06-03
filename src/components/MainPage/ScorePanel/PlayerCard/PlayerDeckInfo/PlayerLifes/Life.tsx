@@ -7,7 +7,7 @@ export const Life = styled.div< { $bright: boolean } >`
   align-items: center;
   background-color: ${(props) => (props.$bright === true ? colors.playerCardAlive : colors.playerCardDead)};
   border-radius: 50%;
-  width: 5vh;
-  height: 5vh;
+  width: 45%;
+  height: 60%;
   align-self: center;
 `;
