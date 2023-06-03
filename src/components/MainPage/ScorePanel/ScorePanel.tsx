@@ -18,7 +18,7 @@ export function ScorePanel() {
     deck: {
       nameOfDeck: 'NORTH_KINGDOM',
       restOfDeck: 10,
-      playersLifes: 2,
+      playersLifes: 1,
     },
   };
   return (

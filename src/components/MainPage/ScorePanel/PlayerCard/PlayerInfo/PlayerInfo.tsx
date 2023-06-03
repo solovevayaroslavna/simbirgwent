@@ -1,14 +1,14 @@
 import React from 'react';
 import { PlayerInfoStyled } from './PlayerInfoStyled';
-import { GamerInfo } from './PlayerInfo.types';
+import { PlayerInfoProps } from './PlayerInfo.types';
 
 export function PlayerInfo(
-  { gamerName, deсkName }: GamerInfo,
+  { gamerInfo }: PlayerInfoProps,
 ) {
   return (
     <PlayerInfoStyled>
-      {gamerName}
-      {deсkName}
+      {gamerInfo.gamerName}
+      {gamerInfo.deсkName}
     </PlayerInfoStyled>
   );
 }

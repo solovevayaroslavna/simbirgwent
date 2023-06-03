@@ -11,10 +11,16 @@ export function PlayerCard({ gamer }: PlayerCardProps) {
     <PlayerCardStyled>
       <PlayerImage />
       <InfoWrapper>
-        <PlayerInfo gamerName={gamer.gamerName} deсkName={gamer.deck.nameOfDeck}>
-          sd
-        </PlayerInfo>
-        <PlayerDeckInfo />
+        <PlayerInfo gamerInfo={{
+          gamerName: gamer.gamerName,
+          deсkName: gamer.deck.nameOfDeck,
+        }}
+        />
+        <PlayerDeckInfo gamerDeckInfo={{
+          restOfDeck: gamer.deck.restOfDeck,
+          gamerLifes: gamer.deck.playersLifes,
+        }}
+        />
       </InfoWrapper>
     </PlayerCardStyled>
   );
