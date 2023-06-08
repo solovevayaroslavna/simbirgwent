@@ -8,6 +8,6 @@ export const Life = styled.div< { $bright: boolean } >`
   background-color: ${(props) => (props.$bright === true ? colors.playerCardAlive : colors.playerCardDead)};
   border-radius: 50%;
   width: 45%;
-  height: 60%;
+  height: 50%;
   align-self: center;
 `;
