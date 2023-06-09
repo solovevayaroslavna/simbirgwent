@@ -4,10 +4,10 @@ import {
 } from '@material-ui/core';
 import '../../theme/colors.css';
 
-export const CardWrapper = styled(Box)({
-  height: '100%',
-  width: '100%',
-});
+export const CardWrapper = styled(Box)`
+  height: 100%;
+  width: 100%;//если указать 13% то будет выглядеть нормально, но надо создавать контейнер с пропорциями 15/8
+`;
 
 export const IndicatorsContainerStyled = styled.div`
 position: relative;
@@ -24,7 +24,7 @@ height: 18%;
 width: 100%; //  
 font-size: ${(props) => `${props.fs}px`};
 border-radius: 50%;
-border : .03em solid var(--color-black);
+border : .01em solid var(--color-black);
 background-color: var(--color-text-main);
 color: var(--color-text-second);
 z-index:1;
@@ -40,7 +40,7 @@ height: 18%;
 width: 100%;// т.к height/width = 15/8, то для того чтобы получить ширину, такую же как высоту, нужно умножить на 8/15 
 background-color: var(--background-type);
 border-radius: 50%;
-border : .03em solid var(--color-black);
+border : 0.1px solid var(--color-black);
 color: var(--color-text-second);
 z-index:1;
 `;
@@ -54,7 +54,7 @@ top: 55%;
 height: 18%;
 width: 100%; //  
 border-radius: 50%;
-border : .03em solid var(--color-black);
+border : .01em solid var(--color-black);
 background-color: var(--color-text-main);
 color: var(--color-text-second);
 z-index:1;
@@ -87,17 +87,22 @@ height: 90%;
 export const CardStyled = styled(Card)`
   background-color: var(--color-text-main);
   padding 2% 0;
+  margin-left: 2%;
   color: var(--color-text-second);
-  width: inherit;
+  width: 100%;
   height: 20%;
+  border-radius: 0;
   font-size: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  text-align: center;
 `;
 
 export const HeaderStyled = styled(Typography)`
   width: 100%;
+  text-align: center;
   font-size: 1rem;
   font-weight: bold;
 `;

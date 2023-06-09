@@ -14,7 +14,7 @@ function CardDescription({ header, children }: CartDescriptionProps) {
   function calculateFontSize(ref : React.MutableRefObject<HTMLDivElement>) {
     const parentDiv = divRef.current;
     const textDiv = ref.current;
-    let minFontSize = 4;
+    let minFontSize = 2;
     let maxFontSize = 30;
     let fontSize = Math.floor((minFontSize + maxFontSize) / 2);
     const height = parentDiv.offsetHeight / 2;
