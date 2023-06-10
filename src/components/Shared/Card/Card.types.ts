@@ -11,7 +11,6 @@ enum Ability {
 }
 export const opponentCardsInGameMock = [{
   id: 'guidstring1',
-  // amountInPack: 2,
   ability: Ability.spy,
   power: 1,
   category: SquadType.meleeSquad,
@@ -21,7 +20,6 @@ export const opponentCardsInGameMock = [{
 },
 {
   id: 'guidstring2',
-  // amountInPack: 2,
   ability: Ability.connection,
   power: 2,
   category: SquadType.longRangeSquad,

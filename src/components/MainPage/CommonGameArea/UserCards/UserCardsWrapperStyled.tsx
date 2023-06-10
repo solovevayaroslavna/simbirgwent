@@ -8,7 +8,7 @@ export const UserCardsWrapperStyled = styled.div`
     justify-content: center;
     align-items: center;
     height: 100%;
+    padding: 0em 0.6em 0em 0.6em;
     background-color: ${colors.cardsListBackgroundColor};
     overflow: auto;
-    // width: 20px;
 `;
