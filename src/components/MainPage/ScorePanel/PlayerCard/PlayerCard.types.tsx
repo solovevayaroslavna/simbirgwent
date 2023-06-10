@@ -4,10 +4,15 @@ export type Gamer = {
 };
 
 export type DeckObject = {
-  nameOfDeck: string,
+  nameOfDeck: Fraction,
   restOfDeck: number,
   playersLifes: number,
 };
+
+enum Fraction {
+  northKingdoms = 'NORTH_KINGDOMS',
+  monsters = 'MONSTERS',
+}
 
 export type PlayerCardProps = {
   gamer: Gamer,

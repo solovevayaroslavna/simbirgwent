@@ -4,11 +4,16 @@ import { PlayerCard } from './PlayerCard';
 import { LeaderCard } from './LeaderCard';
 import { CenterPanel } from './CenterPanel';
 
+enum Fraction {
+  northKingdoms = 'NORTH_KINGDOMS',
+  monsters = 'MONSTERS',
+}
+
 export function ScorePanel() {
   const player1 = {
     gamerName: 'Witch',
     deck: {
-      nameOfDeck: 'MONSTERS',
+      nameOfDeck: Fraction.monsters,
       restOfDeck: 9,
       playersLifes: 2,
     },
@@ -16,7 +21,7 @@ export function ScorePanel() {
   const player2 = {
     gamerName: 'Geralt',
     deck: {
-      nameOfDeck: 'NORTH_KINGDOM',
+      nameOfDeck: Fraction.northKingdoms,
       restOfDeck: 10,
       playersLifes: 1,
     },

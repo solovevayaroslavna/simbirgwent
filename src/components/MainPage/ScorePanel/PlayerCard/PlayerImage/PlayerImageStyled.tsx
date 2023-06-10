@@ -14,4 +14,5 @@ export const PlayerImageStyled = styled.div`
   height: 70%;
   max-width: 100%;
   max-height: 100%;
+  position: relative;
 `;

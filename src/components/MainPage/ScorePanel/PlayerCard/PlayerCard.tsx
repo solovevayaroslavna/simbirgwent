@@ -9,7 +9,7 @@ import { PlayerDeckInfo } from './PlayerDeckInfo';
 export function PlayerCard({ gamer }: PlayerCardProps) {
   return (
     <PlayerCardStyled>
-      <PlayerImage />
+      <PlayerImage fraction={gamer.deck.nameOfDeck} />
       <InfoWrapper>
         <PlayerInfo gamerInfo={{
           gamerName: gamer.gamerName,
