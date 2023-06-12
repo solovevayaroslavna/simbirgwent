@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useMatch } from 'react-router-dom';
+import { colors } from '../../../theme/variables';
 
 interface CustomLinksProps {
   to: string,
@@ -13,7 +14,7 @@ export function CustomLink({ children, to }:CustomLinksProps) {
     <Link
       to={to}
       style={{
-        color: match ? 'var(--color-active)' : 'white',
+        color: match ? `${colors.textMain}` : `${colors.secondaryColor}`,
       }}
     >
       {children}
