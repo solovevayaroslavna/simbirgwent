@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import restOfDeckImage from '../../../../assets/battlefield/restOfDeck-test.jpeg';
+import restOfDeckImage from '../../../../../assets/battlefield/restOfDeck-test.jpeg';
 
 export const RestOfDeckArea = styled.div`
   grid-row: 2 / 3;

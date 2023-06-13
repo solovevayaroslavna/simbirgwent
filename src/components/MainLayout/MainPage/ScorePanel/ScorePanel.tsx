@@ -7,11 +7,11 @@ import { CenterPanel } from './CenterPanel';
 export function ScorePanel() {
   return (
     <ScorePanelStyled>
-      <PlayerCard />
       <LeaderCard />
+      <PlayerCard />
       <CenterPanel />
-      <LeaderCard />
       <PlayerCard />
+      <LeaderCard />
     </ScorePanelStyled>
   );
 }

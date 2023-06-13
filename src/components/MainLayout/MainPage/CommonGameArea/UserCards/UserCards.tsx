@@ -1,6 +1,6 @@
 import React from 'react';
 import { UserCardsWrapperStyled } from './UserCardsWrapperStyled';
-import { Card } from '../../../Shared/Card/CardStyled';
+import { Card } from '../../../../Shared/Card/CardStyled';
 
 export function UserCards() {
   const cards = Array.from({ length: 10 });
