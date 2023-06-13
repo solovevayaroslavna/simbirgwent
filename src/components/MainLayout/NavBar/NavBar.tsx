@@ -8,7 +8,7 @@ export function NavBar() {
       <CustomLink to="/">Колода</CustomLink>
       <CustomLink to="/game">Играть</CustomLink>
       <CustomLink to="/results">Результаты</CustomLink>
-      <CustomLink to="/auth">Аутентификация</CustomLink>
+      <CustomLink to="/auth">Авторизация</CustomLink>
     </NavBarStyled>
   );
 }
