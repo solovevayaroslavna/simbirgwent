@@ -7,7 +7,7 @@ export const NavBarStyled = styled.div`
   align-items: center;
   gap: 5%;
   height: 6%;
-  background-color: ${colors.background};
+  background-color: ${colors.commonGameAreaBackgroundColor};
   & > a {
     text-decoration: none;
   }

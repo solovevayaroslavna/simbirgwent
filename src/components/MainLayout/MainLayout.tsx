@@ -7,7 +7,6 @@ import { Auth } from '../RoutesComponents/Auth';
 import { Results } from '../RoutesComponents/Results';
 import { MainLayoutStyled } from './MainLayoutStyled';
 
-// TODO transform component into hook where MainPage is a childProp
 export function MainLayout() {
   return (
     <MainLayoutStyled>
