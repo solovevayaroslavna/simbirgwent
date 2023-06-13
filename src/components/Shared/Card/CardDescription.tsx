@@ -12,22 +12,24 @@ function CardDescription({ header, children }: CartDescriptionProps) {
   const descriptionRef = useRef(null);
 
   function calculateFontSize(ref : React.MutableRefObject<HTMLDivElement>) {
-    const parentDiv = divRef.current;
-    const textDiv = ref.current;
-    let minFontSize = 2;
-    let maxFontSize = 30;
-    let fontSize = Math.floor((minFontSize + maxFontSize) / 2);
-    const height = parentDiv.offsetHeight / 2;
-    while (maxFontSize - minFontSize > 1) {
-      textDiv.style.fontSize = `${fontSize}px`;
-      if (height > textDiv.offsetHeight) {
-        minFontSize = fontSize;
-      } else {
-        maxFontSize = fontSize;
+    if (divRef.current && ref.current) {
+      const parentDiv = divRef.current;
+      const textDiv = ref.current;
+      let minFontSize = 2;
+      let maxFontSize = 30;
+      let fontSize = Math.floor((minFontSize + maxFontSize) / 2);
+      const height = parentDiv.offsetHeight / 2;
+      while (maxFontSize - minFontSize > 1) {
+        textDiv.style.fontSize = `${fontSize}px`;
+        if (height > textDiv.offsetHeight) {
+          minFontSize = fontSize;
+        } else {
+          maxFontSize = fontSize;
+        }
+        fontSize = Math.floor((minFontSize + maxFontSize) / 2);
       }
-      fontSize = Math.floor((minFontSize + maxFontSize) / 2);
+      textDiv.style.fontSize = `${fontSize}px`;
     }
-    textDiv.style.fontSize = `${fontSize}px`;
   }
 
   useEffect(() => {
