@@ -3,7 +3,7 @@ import {
   Box,
 } from '@material-ui/core';
 import { Card } from './Card';
-import createCards from '../../utils/Images.utils';
+import createCards from '../../../utils/Images.utils';
 // import { ParentComponents } from './ParentComponent';
 
 export function Test() {

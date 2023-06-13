@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../../../../theme/variables';
+import { colors } from '../../../../../../theme/variables';
 
 export const Circle = styled.div`
   display: flex;
@@ -8,7 +8,7 @@ export const Circle = styled.div`
   font-size: 0.7em;
   font-weight: bold;
   background-color: ${colors.gameAreaCircleBlockBackgroundColor};
-  margin: 0em 0em 0em 0.3em;
+  margin: 0 0 0 0.3em;
   color: ${colors.secondaryColor};
   border-radius: 50%;
   width: 2vh;

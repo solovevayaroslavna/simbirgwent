@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { colors } from '../../../../../theme/variables';
-import gameAreaBlock from '../../../../../assets/battlefield/field-item.png';
+import { colors } from '../../../../../../theme/variables';
+import gameAreaBlock from '../../../../../../assets/battlefield/field-item.png';
 
 export const CardsRow = styled.div`
   width: 99%;
   height: 95%;
-  margin: 0.1em 0em 0.1em 0em;
+  margin: 0.1em 0 0.1em 0;
   justify-content: left;
   align-items: left;
   background-image: url(${gameAreaBlock});
