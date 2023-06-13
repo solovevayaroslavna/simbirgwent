@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { NavBar } from './NavBar';
-import { MainPage } from '../MainPage';
+import { MainPage } from './MainPage';
 import { Deck } from '../RoutesComponents/Deck';
 import { Auth } from '../RoutesComponents/Auth';
 import { Results } from '../RoutesComponents/Results';

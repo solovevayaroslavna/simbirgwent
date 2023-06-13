@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../../../../theme/variables';
+import { colors } from '../../../../../../theme/variables';
 
 export const GameBoardSepatator = styled.div`
   width: 100%;
