@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { colors } from '../../../../../theme/variables';
-import gameAreaBlock from '../../../../../assets/battlefield/field-item.png';
+import { colors } from '../../../../../../theme/variables';
+import gameAreaBlock from '../../../../../../assets/battlefield/field-item.png';
 
 export const CardsRow = styled.div`
   // border: 0.001em solid ${colors.secondaryColor};

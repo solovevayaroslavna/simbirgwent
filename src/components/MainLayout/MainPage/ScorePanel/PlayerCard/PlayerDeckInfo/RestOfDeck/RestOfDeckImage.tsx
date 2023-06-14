@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import img from '../../../../../../assets/playerCard/restOfDeck.png';
+import img from '../../../../../../../assets/playerCard/restOfDeck.png';
 
 export const RestOfDeckImage = styled.div`
     background-image: url(${img});

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../../../../../theme/variables';
+import { colors } from '../../../../../../../theme/variables';
 
 export const Life = styled.div< { $bright: boolean } >`
   display: flex;

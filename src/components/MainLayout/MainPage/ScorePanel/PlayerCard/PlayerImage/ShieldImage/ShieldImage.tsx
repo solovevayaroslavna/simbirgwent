@@ -1,7 +1,7 @@
 import React from 'react';
 import { ShieldImageStyled } from './ShieldImageStyled';
-import monstersPic from '../../../../../../assets/playerCard/monsters.png';
-import northPic from '../../../../../../assets/playerCard/northern-realms.png';
+import monstersPic from '../../../../../../../assets/playerCard/monsters.png';
+import northPic from '../../../../../../../assets/playerCard/northern-realms.png';
 import { ShieldImageProps } from './ShieldImage.types';
 
 export function ShieldImage(fraction: ShieldImageProps) {

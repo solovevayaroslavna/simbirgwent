@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import userImage from '../../../../../assets/playerCard/user-example.png';
+import userImage from '../../../../../../assets/playerCard/user-example.png';
 
 export const PlayerImageStyled = styled.div`
   background-image: url(${userImage});
