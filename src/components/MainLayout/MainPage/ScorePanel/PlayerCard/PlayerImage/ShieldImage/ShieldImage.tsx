@@ -1,20 +1,25 @@
 import React from 'react';
 import { ShieldImageStyled } from './ShieldImageStyled';
-import monstersPic from '../../../../../../../assets/playerCard/monsters.png';
-import northPic from '../../../../../../../assets/playerCard/northern-realms.png';
-import { ShieldImageProps } from './ShieldImage.types';
+import monstersPic from '../../../../../../../assets/playerCard/monsters-shield.png';
+import northPic from '../../../../../../../assets/playerCard/north-kingdoms-shield.png';
+import { ShieldImageProps, Type } from './ShieldImage.types';
 
-export function ShieldImage(fraction: ShieldImageProps) {
-  function chooseImage(fractionName: ShieldImageProps): String {
-    if (fractionName.fraction === 'NORTH_KINGDOMS') {
-      return northPic;
-    }
-    return monstersPic;
+export function ShieldImage({ fraction, type }: ShieldImageProps) {
+  let path: String = '';
+  if (fraction === 'NORTH_KINGDOMS') {
+    path = northPic;
+  } else {
+    path = monstersPic;
   }
 
-  const url = chooseImage(fraction);
+  let typeName: String = '';
+  if (type === Type.opponent) {
+    typeName = 'opponent';
+  } else {
+    typeName = 'player';
+  }
 
   return (
-    <ShieldImageStyled $fraction={url} />
+    <ShieldImageStyled $fraction={path} $type={typeName} />
   );
 }

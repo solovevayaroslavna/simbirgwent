@@ -3,6 +3,12 @@ export enum Fraction {
   monsters = 'MONSTERS',
 }
 
+export enum Type {
+  player,
+  opponent,
+}
+
 export type PlayerImageProps = {
   fraction: Fraction;
+  type: Type;
 };

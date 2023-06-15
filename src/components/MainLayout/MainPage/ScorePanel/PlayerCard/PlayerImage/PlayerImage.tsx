@@ -3,10 +3,10 @@ import { PlayerImageStyled } from './PlayerImageStyled';
 import { ShieldImage } from './ShieldImage';
 import { PlayerImageProps } from './PlayerImage.types';
 
-export function PlayerImage({ fraction }: PlayerImageProps) {
+export function PlayerImage({ fraction, type }: PlayerImageProps) {
   return (
     <PlayerImageStyled>
-      <ShieldImage fraction={fraction} />
+      <ShieldImage fraction={fraction} type={type} />
     </PlayerImageStyled>
   );
 }

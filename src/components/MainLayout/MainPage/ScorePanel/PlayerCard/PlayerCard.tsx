@@ -6,10 +6,10 @@ import { InfoWrapper } from './InfoWrapper';
 import { PlayerInfo } from './PlayerInfo';
 import { PlayerDeckInfo } from './PlayerDeckInfo';
 
-export function PlayerCard({ gamer }: PlayerCardProps) {
+export function PlayerCard({ gamer, type }: PlayerCardProps) {
   return (
     <PlayerCardStyled>
-      <PlayerImage fraction={gamer.deck.nameOfDeck} />
+      <PlayerImage fraction={gamer.deck.nameOfDeck} type={type} />
       <InfoWrapper>
         <PlayerInfo gamerInfo={{
           gamerName: gamer.gamerName,

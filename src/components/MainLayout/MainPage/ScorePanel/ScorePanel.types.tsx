@@ -14,12 +14,6 @@ enum Fraction {
   monsters = 'MONSTERS',
 }
 
-export enum Type {
-  player,
-  opponent,
-}
-
-export type PlayerCardProps = {
+export type ScorePanelProps = {
   gamer: Gamer,
-  type: Type,
 };

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ShieldImageStyled = styled.div< { $fraction } >`
+export const ShieldImageStyled = styled.div< { $fraction, $type } >`
   background-image: url(${(props) => props.$fraction});
   background-size: contain;
   background-position: center;
@@ -8,5 +8,5 @@ export const ShieldImageStyled = styled.div< { $fraction } >`
   width: 40%;
   height: 40%;
   position: absolute;
-  top: 70%;
+  top: ${(props) => (props.$type === 'opponent' ? '0%' : '70%')}
 `;

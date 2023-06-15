@@ -9,6 +9,11 @@ enum Fraction {
   monsters = 'MONSTERS',
 }
 
+enum Type {
+  player,
+  opponent,
+}
+
 export function ScorePanel() {
   const player1 = {
     gamerName: 'Witch',
@@ -29,9 +34,9 @@ export function ScorePanel() {
   return (
     <ScorePanelStyled>
       <LeaderCard />
-      <PlayerCard gamer={player1} />
+      <PlayerCard gamer={player1} type={Type.opponent} />
       <CenterPanel />
-      <PlayerCard gamer={player2} />
+      <PlayerCard gamer={player2} type={Type.player} />
       <LeaderCard />
     </ScorePanelStyled>
   );
