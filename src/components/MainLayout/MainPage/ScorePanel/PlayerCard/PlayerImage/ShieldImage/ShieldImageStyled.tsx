@@ -5,8 +5,9 @@ export const ShieldImageStyled = styled.div< { $fraction, $type } >`
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  width: 40%;
-  height: 40%;
+  width: 50%;
+  height: 50%;
   position: absolute;
-  top: ${(props) => (props.$type === 'opponent' ? '0%' : '70%')}
+  top: ${(props) => (props.$type === 'opponent' ? '-10%' : '70%')};
+  left: -5%;
 `;
