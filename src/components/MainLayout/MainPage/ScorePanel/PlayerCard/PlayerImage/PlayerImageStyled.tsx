@@ -8,7 +8,7 @@ export const PlayerImageStyled = styled.div`
   background-repeat: no-repeat;
   border: 3px white solid;
   border-radius: 100%;
-  margin: auto;
+  margin: auto 0.5em;
   width: 40%;
   aspect-ratio: 1;
   position: relative;
