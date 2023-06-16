@@ -27,7 +27,7 @@ export function ScorePanel() {
     gamerName: 'Geralt',
     deck: {
       nameOfDeck: Fraction.northKingdoms,
-      restOfDeck: 10,
+      restOfDeck: 12,
       playersLifes: 1,
     },
   };
