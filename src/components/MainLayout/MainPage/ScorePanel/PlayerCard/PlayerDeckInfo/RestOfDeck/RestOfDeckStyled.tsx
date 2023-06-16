@@ -7,5 +7,5 @@ export const RestOfDeckStyled = styled.div`
   display: flex;
   align-items: center;
   color: ${colors.playerCardFontColor};
-  font-size: 1.2vw;
+  font-size: min(1.1vw, 2.2vh);
 `;

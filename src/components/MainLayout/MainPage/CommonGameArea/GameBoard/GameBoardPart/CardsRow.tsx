@@ -3,10 +3,9 @@ import { colors } from '../../../../../../theme/variables';
 import gameAreaBlock from '../../../../../../assets/battlefield/field-item.png';
 
 export const CardsRow = styled.div`
-  // border: 0.001em solid ${colors.secondaryColor};
-  // box-shadow: 0.001vh 0.4vh 0.4vh ${colors.secondaryColor};
   width: 99%;
-  height: 90%;
+  height: 95%;
+  margin: 0.1em 0 0.1em 0;
   justify-content: left;
   align-items: left;
   background-image: url(${gameAreaBlock});
