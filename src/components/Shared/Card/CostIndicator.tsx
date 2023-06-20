@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { debounce } from 'lodash';
 import { IndicatorStyled } from './CardComponentsStyled';
 
 interface CostIndicatorProps {
@@ -11,11 +12,13 @@ export function CostIndicator({ children }:CostIndicatorProps) {
 
   useEffect(() => {
     const div = divRef.current;
-    const observer = new ResizeObserver((entries) => {
-      const parentWidth = entries[0].contentRect.width;
-      const parentHeight = entries[0].contentRect.height;
-      const maxDimension = Math.max(parentWidth, parentHeight);
-      setFontSize(maxDimension / 2);
+    const observer = new ResizeObserver(() => {
+      debounce((entries) => {
+        const parentWidth = entries[0].contentRect.width;
+        const parentHeight = entries[0].contentRect.height;
+        const maxDimension = Math.max(parentWidth, parentHeight);
+        setFontSize(maxDimension / 2);
+      }, 100);
     });
     observer.observe(div);
     return () => {
