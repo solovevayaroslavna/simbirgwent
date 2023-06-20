@@ -20,6 +20,6 @@ export function ShieldImage({ fraction, type }: ShieldImageProps) {
   }
 
   return (
-    <ShieldImageStyled $fraction={path} $type={typeName} />
+    <ShieldImageStyled fraction={path} type={typeName} />
   );
 }

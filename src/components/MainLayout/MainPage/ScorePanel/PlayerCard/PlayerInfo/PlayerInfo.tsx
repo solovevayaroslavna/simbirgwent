@@ -3,9 +3,7 @@ import { PlayerInfoStyled } from './PlayerInfoStyled';
 import { PlayerInfoProps } from './PlayerInfo.types';
 import { PStyled } from './PStyled';
 
-export function PlayerInfo(
-  { gamerInfo }: PlayerInfoProps,
-) {
+export function PlayerInfo({ gamerInfo }: PlayerInfoProps) {
   return (
     <PlayerInfoStyled>
       <PStyled $bold>
