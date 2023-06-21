@@ -3,16 +3,7 @@ import { ScorePanelStyled } from './ScorePanelStyled';
 import { PlayerCard } from './PlayerCard';
 import { LeaderCard } from './LeaderCard';
 import { CenterPanel } from './CenterPanel';
-
-enum Fraction {
-  northKingdoms = 'NORTH_KINGDOMS',
-  monsters = 'MONSTERS',
-}
-
-enum Type {
-  player,
-  opponent,
-}
+import { Fraction, Type } from './Player.types';
 
 export function ScorePanel() {
   const player1 = {

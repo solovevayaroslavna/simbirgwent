@@ -1,12 +1,4 @@
-export enum Fraction {
-  northKingdoms = 'NORTH_KINGDOMS',
-  monsters = 'MONSTERS',
-}
-
-export enum Type {
-  player,
-  opponent,
-}
+import { Fraction, Type } from '../../Player.types';
 
 export type PlayerImageProps = {
   fraction: Fraction;

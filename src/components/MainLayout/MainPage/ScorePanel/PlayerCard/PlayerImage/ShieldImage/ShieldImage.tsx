@@ -2,7 +2,8 @@ import React from 'react';
 import { ShieldImageStyled } from './ShieldImageStyled';
 import monstersPic from '../../../../../../../assets/playerCard/monsters-shield.png';
 import northPic from '../../../../../../../assets/playerCard/north-kingdoms-shield.png';
-import { ShieldImageProps, Type } from './ShieldImage.types';
+import { ShieldImageProps } from './ShieldImage.types';
+import { Type } from '../../../Player.types';
 
 export function ShieldImage({ fraction, type }: ShieldImageProps) {
   let path: String = '';

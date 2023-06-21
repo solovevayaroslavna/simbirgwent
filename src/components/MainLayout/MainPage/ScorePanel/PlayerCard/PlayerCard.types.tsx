@@ -1,3 +1,5 @@
+import { Fraction, Type } from '../Player.types';
+
 export type Gamer = {
   gamerName: string,
   deck: DeckObject,
@@ -8,16 +10,6 @@ export type DeckObject = {
   restOfDeck: number,
   playersLifes: number,
 };
-
-enum Fraction {
-  northKingdoms = 'NORTH_KINGDOMS',
-  monsters = 'MONSTERS',
-}
-
-export enum Type {
-  player,
-  opponent,
-}
 
 export type PlayerCardProps = {
   gamer: Gamer,

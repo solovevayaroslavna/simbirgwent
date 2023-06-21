@@ -1,10 +1,11 @@
 import React from 'react';
 import { PlayerCardStyled } from './PlayerCardStyled';
-import { PlayerCardProps, Type } from './PlayerCard.types';
+import { PlayerCardProps } from './PlayerCard.types';
 import { PlayerImage } from './PlayerImage';
 import { InfoWrapper } from './InfoWrapper';
 import { PlayerInfo } from './PlayerInfo';
 import { PlayerDeckInfo } from './PlayerDeckInfo';
+import { Type } from '../Player.types';
 
 export function PlayerCard({ gamer, type }: PlayerCardProps) {
   return (
