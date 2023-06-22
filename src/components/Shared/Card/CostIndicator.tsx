@@ -3,9 +3,10 @@ import { IndicatorStyled } from './CardComponentsStyled';
 
 interface CostIndicatorProps {
   children : React.ReactNode,
+  minimized? : boolean,
 }
 
-export function CostIndicator({ children }:CostIndicatorProps) {
+function CostIndicator({ children, minimized }:CostIndicatorProps) {
   const [fontSize, setFontSize] = useState(16);
   const divRef = useRef(null);
 
@@ -24,8 +25,14 @@ export function CostIndicator({ children }:CostIndicatorProps) {
   }, []);
 
   return (
-    <IndicatorStyled ref={divRef} fs={fontSize}>
+    <IndicatorStyled minimized={minimized} ref={divRef} fs={fontSize}>
       {children}
     </IndicatorStyled>
   );
 }
+
+CostIndicator.defaultProps = {
+  minimized: false,
+};
+
+export { CostIndicator };

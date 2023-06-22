@@ -2,53 +2,48 @@ import React from 'react';
 import '../../../theme/colors.css';
 
 // import { CostIndicator } from './CostIndicator';
-import CardDescription from './CardDescription';
 import { IndicatorsContainer } from './IndicatorsContainer';
 import {
-  CardBody, TypeIndicatorStyled, ImgContainer, CardWrapper,
-  AbilityStyled, TypeOfArmyStyled, TestIndicatorStyled,
+  CardBodyMinimized, TypeIndicatorStyled, DownIndicatorsContainerStyled,
+  ImgContainer, CardWrapper, AbilityStyled, TestIndicatorStyled,
 } from './CardComponentsStyled';
 import img from '../../../images/cards/bow.svg';
 import img2 from '../../../images/cards/support.svg';
 
 interface CardProps {
-  header: string,
   image: string,
-  text: string,
   power: string,
   ability: number,
   category: number
 }
 
-export function Card(props : CardProps) {
+export function CardMinimized(props : CardProps) {
   const {
-    image, header, text, power, category, ability,
+    image, power, ability, category,
   } = props;
   return (
     <CardWrapper>
-      <CardBody backgroundImage={image}>
+      <CardBodyMinimized backgroundImage={image}>
         <IndicatorsContainer>
-          <TestIndicatorStyled>
+          <TestIndicatorStyled minimized>
             <ImgContainer backgroundImage={power} />
           </TestIndicatorStyled>
-          {category
-            ? (
-              <>
-                <TypeIndicatorStyled>
-                  <ImgContainer backgroundImage={img} />
-                </TypeIndicatorStyled>
-                <TypeOfArmyStyled />
-              </>
-            ) : ''}
+        </IndicatorsContainer>
+        <DownIndicatorsContainerStyled>
           {ability
             ? (
-              <AbilityStyled>
+              <TypeIndicatorStyled minimized>
+                <ImgContainer backgroundImage={img} />
+              </TypeIndicatorStyled>
+            ) : ''}
+          {category
+            ? (
+              <AbilityStyled minimized>
                 <ImgContainer backgroundImage={img2} />
               </AbilityStyled>
             ) : ''}
-        </IndicatorsContainer>
-      </CardBody>
-      <CardDescription header={header}>{text}</CardDescription>
+        </DownIndicatorsContainerStyled>
+      </CardBodyMinimized>
     </CardWrapper>
   );
 }
