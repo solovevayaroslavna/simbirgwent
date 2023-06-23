@@ -6,7 +6,7 @@ import CardDescription from './CardDescription';
 import { IndicatorsContainer } from './IndicatorsContainer';
 import {
   CardBody, TypeIndicatorStyled, ImgContainer, CardWrapper,
-  AbilityStyled, TypeOfArmyStyled, TestIndicatorStyled,
+  AbilityStyled, TypeOfArmyStyled, PowerIndicatorStyled,
 } from './CardComponentsStyled';
 import img from '../../../images/cards/bow.svg';
 import img2 from '../../../images/cards/support.svg';
@@ -28,9 +28,9 @@ export function Card(props : CardProps) {
     <CardWrapper>
       <CardBody backgroundImage={image}>
         <IndicatorsContainer>
-          <TestIndicatorStyled>
+          <PowerIndicatorStyled>
             <ImgContainer backgroundImage={power} />
-          </TestIndicatorStyled>
+          </PowerIndicatorStyled>
           {category
             ? (
               <>

@@ -31,16 +31,13 @@ export const DownIndicatorsContainerStyled = styled.div`
   gap: 10%;
 `;
 
+// Если power будет числом
 export const IndicatorStyled = styled.div <{ fs: number, minimized: boolean }>`
-  //position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  //top: 0;
   height: ${(props) => (props.minimized ? '15%' : '18%')};
   width: '100%';
- /*  height: 15%;
-  width: 100%;  */
   font-size: ${(props) => `${props.fs}px`};
   border-radius: 50%;
   border : 0.1px solid var(--color-black);
@@ -48,7 +45,8 @@ export const IndicatorStyled = styled.div <{ fs: number, minimized: boolean }>`
   color: var(--color-text-second);
 `;
 
-export const TestIndicatorStyled = styled.div<{ minimized?: boolean }>`
+// Поменял на это, так как требуется, чтобы power было картинкой из за спец карт
+export const PowerIndicatorStyled = styled.div<{ minimized?: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,15 +59,11 @@ export const TestIndicatorStyled = styled.div<{ minimized?: boolean }>`
 `;
 
 export const TypeIndicatorStyled = styled.div<{ minimized?: boolean }>`
-  //position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  //top: 30%;
   height: ${(props) => (props.minimized ? '100%' : '18%')};
   width: ${(props) => (props.minimized ? 'calc(15*15%/8)' : '100%')};
- /*  height: 18%;
-  width: 100%; */
   background-color: var(--background-type);
   border-radius: 50%;
   border : 0.1px solid var(--color-black);
@@ -77,15 +71,11 @@ export const TypeIndicatorStyled = styled.div<{ minimized?: boolean }>`
 `;
 
 export const AbilityStyled = styled.div<{ minimized?: boolean }>`
-  //position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  //top: 55%;
   height: ${(props) => (props.minimized ? '100%' : '18%')};
   width: ${(props) => (props.minimized ? 'calc(15*15%/8)' : '100%')};
- /*  height: 18%;
-  width: 100%; */
   border-radius: 50%;
   border : 0.1px solid var(--color-black);
   background-color: var(--color-text-main);
@@ -94,7 +84,6 @@ export const AbilityStyled = styled.div<{ minimized?: boolean }>`
 
 export const ImgContainer = styled.div <{ backgroundImage: string }>`
   height: 80%;
-  // т.к height/width = 15/8, то для того чтобы получить ширину, такую же как высоту, нужно умножить на 15/8
   width: 80%;
   background: url(${(props) => props.backgroundImage}) 60% 60% no-repeat;
   background-size: contain;

@@ -5,7 +5,7 @@ import '../../../theme/colors.css';
 import { IndicatorsContainer } from './IndicatorsContainer';
 import {
   CardBodyMinimized, TypeIndicatorStyled, DownIndicatorsContainerStyled,
-  ImgContainer, CardWrapper, AbilityStyled, TestIndicatorStyled,
+  ImgContainer, CardWrapper, AbilityStyled, PowerIndicatorStyled,
 } from './CardComponentsStyled';
 import img from '../../../images/cards/bow.svg';
 import img2 from '../../../images/cards/support.svg';
@@ -25,9 +25,9 @@ export function CardMinimized(props : CardProps) {
     <CardWrapper>
       <CardBodyMinimized backgroundImage={image}>
         <IndicatorsContainer>
-          <TestIndicatorStyled minimized>
+          <PowerIndicatorStyled minimized>
             <ImgContainer backgroundImage={power} />
-          </TestIndicatorStyled>
+          </PowerIndicatorStyled>
         </IndicatorsContainer>
         <DownIndicatorsContainerStyled>
           {ability
