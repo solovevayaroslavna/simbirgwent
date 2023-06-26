@@ -1,7 +1,5 @@
 import React from 'react';
 import '../../../theme/colors.css';
-
-// import { CostIndicator } from './CostIndicator';
 import CardDescription from './CardDescription';
 import { IndicatorsContainer } from './IndicatorsContainer';
 import {
