@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import cardExample from '../../../../assets/cards/card-example.png';
 
 export const ScorePanelStyled = styled.div`
   display: grid;
