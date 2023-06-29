@@ -1,11 +1,5 @@
 export enum Warriors {
-  swordsmen,
-  archers,
-  artillery,
+  swordsmen = 'swordsmen',
+  archers = 'archers',
+  artillery = 'artillery',
 }
-
-// export enum Warriors {
-//   swordsmen = 'swordsmen',
-//   archers = 'archers',
-//   artillery = 'artillery',
-// }

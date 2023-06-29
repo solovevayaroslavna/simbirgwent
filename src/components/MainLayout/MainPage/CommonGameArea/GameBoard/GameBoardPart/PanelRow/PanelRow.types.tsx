@@ -1,8 +1,8 @@
 import { PlayerType } from '../../Player.types';
-// import { Warriors } from '../../Warriors';
+import { Warriors } from '../../Warriors';
 
 export interface PanelRowProps {
-  warriorsType: String;
+  warriorsType: Warriors;
   playerType: PlayerType;
   power: number;
 }
