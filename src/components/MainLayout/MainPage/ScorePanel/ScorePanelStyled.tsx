@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const ScorePanelStyled = styled.div`
-    display: flex;
-    flex-direction: column;
-    height: 100%;   
-    width: 21%;  
-    float: left;
+  display: grid;
+  grid-area: left;
+  height: 100%;
+  background-image: url(${cardExample});
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
