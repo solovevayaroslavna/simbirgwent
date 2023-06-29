@@ -1,4 +1,4 @@
-import { Type } from '../../Player.types';
+import { PlayerType } from '../../Player.types';
 
 export enum Warriors {
   swordsmen,
@@ -8,6 +8,6 @@ export enum Warriors {
 
 export interface PanelRowProps {
   warriorsType: Warriors;
-  playerType: Type;
-  pwr: number;
+  playerType: PlayerType;
+  power: number;
 }

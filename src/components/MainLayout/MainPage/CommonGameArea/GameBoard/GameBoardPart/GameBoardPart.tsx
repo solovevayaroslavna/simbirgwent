@@ -9,7 +9,7 @@ export function GameBoardPart({ elements, type }: GameBoardPartProps) {
       {elements.map((element) => (
         <PanelRow
           key={element.id}
-          pwr={element.value}
+          power={element.value}
           playerType={type}
           warriorsType={Warriors[Warriors[element.id]]}
         />

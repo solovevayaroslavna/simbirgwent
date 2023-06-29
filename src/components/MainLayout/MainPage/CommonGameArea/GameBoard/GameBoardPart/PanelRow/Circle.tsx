@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import { colors } from '../../../../../../../theme/variables';
-import { Type } from '../../Player.types';
+import { PlayerType } from '../../Player.types';
 
-export const Circle = styled.div<{ playerType: Type }>`
+export const Circle = styled.div<{ playerType: PlayerType }>`
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: min(0.9vw, 1.8vh);
   font-weight: bold;
-  background-color: ${(props) => (props.playerType === Type.player
+  background-color: ${(props) => (props.playerType === PlayerType.player
     ? colors.gameAreaCirclePlayerColor
     : colors.gameAreaCircleOpponentColor)};
   margin: 0 0 0 0.3em;

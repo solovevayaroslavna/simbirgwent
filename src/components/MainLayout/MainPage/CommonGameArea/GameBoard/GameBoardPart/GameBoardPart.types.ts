@@ -1,4 +1,4 @@
-import { Type } from '../Player.types';
+import { PlayerType } from '../Player.types';
 
 export interface Element {
   id: number;
@@ -7,5 +7,5 @@ export interface Element {
 
 export interface GameBoardPartProps {
   elements: Element[];
-  type: Type;
+  type: PlayerType;
 }

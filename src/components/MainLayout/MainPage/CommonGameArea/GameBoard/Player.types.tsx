@@ -1,4 +1,4 @@
-export enum Type {
+export enum PlayerType {
   player,
   opponent,
 }

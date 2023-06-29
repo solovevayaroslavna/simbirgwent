@@ -1,14 +1,14 @@
 import React from 'react';
 import { CardsRow } from './CardsRow';
 import { Circle } from './Circle';
-import { WeatherPart } from './WeatherPart';
+import { SpecialCardsPart } from './SpecialCardsPart';
 import { PanelRowProps } from './PanelRow.types';
 
-export function PanelRow({ warriorsType, playerType, pwr }: PanelRowProps) {
+export function PanelRow({ warriorsType, playerType, power }: PanelRowProps) {
   return (
     <>
-      <Circle playerType={playerType}>{pwr}</Circle>
-      <WeatherPart />
+      <Circle playerType={playerType}>{power}</Circle>
+      <SpecialCardsPart />
       <CardsRow>
         { warriorsType }
       </CardsRow>

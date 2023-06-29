@@ -2,7 +2,7 @@ import React from 'react';
 import { GameBoardPart } from './GameBoardPart';
 import { GameAreaWrapper } from './GameAreaWrapper';
 import { GameBoardSepatator } from './GameBoardSeparator/GameBoardSeparator';
-import { Type } from './Player.types';
+import { PlayerType } from './Player.types';
 
 // id - type of Warriors
 //  2 - artillery
@@ -22,9 +22,9 @@ const elementsPlayer = [
 export function GameBoard() {
   return (
     <GameAreaWrapper>
-      <GameBoardPart type={Type.opponent} elements={elementsOpponent} />
+      <GameBoardPart type={PlayerType.opponent} elements={elementsOpponent} />
       <GameBoardSepatator />
-      <GameBoardPart type={Type.player} elements={elementsPlayer} />
+      <GameBoardPart type={PlayerType.player} elements={elementsPlayer} />
     </GameAreaWrapper>
   );
 }
