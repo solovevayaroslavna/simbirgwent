@@ -1,6 +1,8 @@
 import React from 'react';
 import '../../../theme/colors.css';
 import { IndicatorsContainer } from './IndicatorsContainer';
+import { CostIndicator } from './CostIndicator';
+import { ArmyCard, WeatherCard } from './Card.types';
 import {
   CardBodyMinimized, TypeIndicatorStyled, DownIndicatorsContainerStyled,
   ImgContainer, CardWrapper, AbilityStyled, PowerIndicatorStyled,
@@ -8,38 +10,39 @@ import {
 import img from '../../../images/cards/bow.svg';
 import img2 from '../../../images/cards/support.svg';
 
-interface CardProps {
-  image: string,
-  power: string,
-  ability: number,
-  category: number
+interface CardMinimizedProps {
+  card: ArmyCard | WeatherCard;
 }
 
-export function CardMinimized(props : CardProps) {
+export function CardMinimized(props : CardMinimizedProps) {
+  const { card } = props;
   const {
-    image, power, ability, category,
-  } = props;
+    image, power,
+  } = card;
   return (
     <CardWrapper>
       <CardBodyMinimized backgroundImage={image}>
         <IndicatorsContainer>
-          <PowerIndicatorStyled minimized>
-            <ImgContainer backgroundImage={power} />
-          </PowerIndicatorStyled>
+          {typeof power === 'string'
+            ? (
+              <PowerIndicatorStyled minimized>
+                <ImgContainer backgroundImage={power} />
+              </PowerIndicatorStyled>
+            ) : <CostIndicator minimized>{power}</CostIndicator>}
         </IndicatorsContainer>
         <DownIndicatorsContainerStyled>
-          {ability
-            ? (
+          {Object.prototype.hasOwnProperty.call(card, 'category')
+            && (
               <TypeIndicatorStyled minimized>
                 <ImgContainer backgroundImage={img} />
               </TypeIndicatorStyled>
-            ) : ''}
-          {category
-            ? (
-              <AbilityStyled minimized>
-                <ImgContainer backgroundImage={img2} />
-              </AbilityStyled>
-            ) : ''}
+            ) }
+          {Object.prototype.hasOwnProperty.call(card, 'ability')
+           && (
+           <AbilityStyled minimized>
+             <ImgContainer backgroundImage={img2} />
+           </AbilityStyled>
+           )}
         </DownIndicatorsContainerStyled>
       </CardBodyMinimized>
     </CardWrapper>

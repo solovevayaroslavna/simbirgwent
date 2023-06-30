@@ -2,6 +2,8 @@ import React from 'react';
 import '../../../theme/colors.css';
 import CardDescription from './CardDescription';
 import { IndicatorsContainer } from './IndicatorsContainer';
+import { CostIndicator } from './CostIndicator';
+import { ArmyCard, WeatherCard } from './Card.types';
 import {
   CardBody, TypeIndicatorStyled, ImgContainer, CardWrapper,
   AbilityStyled, TypeOfArmyStyled, PowerIndicatorStyled,
@@ -10,40 +12,39 @@ import img from '../../../images/cards/bow.svg';
 import img2 from '../../../images/cards/support.svg';
 
 interface CardProps {
-  header: string,
-  image: string,
-  text: string,
-  power: string,
-  ability: number,
-  category: number
+  card: ArmyCard | WeatherCard;
 }
 
 export function Card(props : CardProps) {
+  const { card } = props;
   const {
-    image, header, text, power, category, ability,
-  } = props;
+    image, power, header, text,
+  } = card;
   return (
     <CardWrapper>
       <CardBody backgroundImage={image}>
         <IndicatorsContainer>
-          <PowerIndicatorStyled>
-            <ImgContainer backgroundImage={power} />
-          </PowerIndicatorStyled>
-          {category
+          {typeof power === 'string'
             ? (
+              <PowerIndicatorStyled>
+                <ImgContainer backgroundImage={power} />
+              </PowerIndicatorStyled>
+            ) : <CostIndicator minimized={false}>{power}</CostIndicator>}
+          {Object.prototype.hasOwnProperty.call(card, 'category')
+            && (
               <>
                 <TypeIndicatorStyled>
                   <ImgContainer backgroundImage={img} />
                 </TypeIndicatorStyled>
                 <TypeOfArmyStyled />
               </>
-            ) : ''}
-          {ability
-            ? (
+            )}
+          {Object.prototype.hasOwnProperty.call(card, 'ability')
+            && (
               <AbilityStyled>
                 <ImgContainer backgroundImage={img2} />
               </AbilityStyled>
-            ) : ''}
+            )}
         </IndicatorsContainer>
       </CardBody>
       <CardDescription header={header}>{text}</CardDescription>

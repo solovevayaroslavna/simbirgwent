@@ -1,3 +1,21 @@
+export interface ICard {
+  id:number,
+  image: string,
+  header: string,
+  text: string,
+  amount: number
+}
+
+export interface ArmyCard extends ICard {
+  power: number,
+  ability: number,
+  category: number,
+}
+
+export interface WeatherCard extends ICard {
+  power: string,
+}
+
 export enum SquadType {
   meleeSquad = 'MELEE_SQUAD',
   longRangeSquad = 'LONG_RANGE_SQUAD',
