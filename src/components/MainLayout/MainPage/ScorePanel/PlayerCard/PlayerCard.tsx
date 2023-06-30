@@ -9,7 +9,7 @@ import { Type } from '../Player.types';
 
 export function PlayerCard({ gamer, type }: PlayerCardProps) {
   return (
-    <PlayerCardStyled>
+    <PlayerCardStyled type={type}>
       <PlayerImage fraction={gamer.deck.nameOfDeck} type={type} />
       <InfoWrapper>
         {type === Type.opponent
