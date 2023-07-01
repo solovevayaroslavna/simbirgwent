@@ -1,9 +1,7 @@
 import React from 'react';
-import { LeftIndicatorsContainerStyled } from './CardComponentsStyled';
+import { LeftIndicatorsContainerStyled } from './IndicatorsContainerStyled';
+import { IndicatorsContainerProps } from './IndicatorsContainer.types';
 
-interface IndicatorsContainerProps {
-  children : React.ReactNode,
-}
 export function IndicatorsContainer({ children }:IndicatorsContainerProps) {
   return (
     <LeftIndicatorsContainerStyled>

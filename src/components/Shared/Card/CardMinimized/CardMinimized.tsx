@@ -1,18 +1,15 @@
 import React from 'react';
-import '../../../theme/colors.css';
-import { IndicatorsContainer } from './IndicatorsContainer';
-import { CostIndicator } from './CostIndicator';
-import { ArmyCard, WeatherCard } from './Card.types';
-import {
-  CardBodyMinimized, TypeIndicatorStyled, DownIndicatorsContainerStyled,
-  ImgContainer, CardWrapper, AbilityStyled, PowerIndicatorStyled,
-} from './CardComponentsStyled';
-import img from '../../../images/cards/bow.svg';
-import img2 from '../../../images/cards/support.svg';
+import '../../../../theme/colors.css';
+import { IndicatorsContainer } from '../IndicatorsContainer';
+import { CostIndicator } from '../CostIndicator';
 
-interface CardMinimizedProps {
-  card: ArmyCard | WeatherCard;
-}
+import { DownIndicatorsContainerStyled, CardBodyMinimized } from './CardMinimizedStyled';
+import {
+  TypeIndicatorStyled, ImgContainer, CardWrapper, AbilityStyled, PowerIndicatorStyled,
+} from '../CardComponentsStyled';
+import img from '../../../../images/cards/bow.svg';
+import img2 from '../../../../images/cards/support.svg';
+import { CardMinimizedProps } from './CardMinimized.types';
 
 export function CardMinimized(props : CardMinimizedProps) {
   const { card } = props;

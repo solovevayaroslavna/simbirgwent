@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../theme/colors.css';
-import CardDescription from './CardDescription';
-import { IndicatorsContainer } from './IndicatorsContainer';
+import { CardDescription } from './CardDescription';
+import { IndicatorsContainer } from './IndicatorsContainer/IndicatorsContainer';
 import { CostIndicator } from './CostIndicator';
 import { ArmyCard, WeatherCard } from './Card.types';
 import {

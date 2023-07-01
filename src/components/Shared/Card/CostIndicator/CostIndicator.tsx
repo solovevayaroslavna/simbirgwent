@@ -1,10 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { IndicatorStyled } from './CardComponentsStyled';
-
-interface CostIndicatorProps {
-  children : React.ReactNode,
-  minimized : boolean,
-}
+import { IndicatorStyled } from './CostIndicatorStyled';
+import { CostIndicatorProps } from './CostIndicator.types';
 
 export function CostIndicator({ minimized, children }:CostIndicatorProps) {
   const [fontSize, setFontSize] = useState(16);

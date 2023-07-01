@@ -1,12 +1,8 @@
 import React, { useEffect, useRef } from 'react';
+import { CartDescriptionProps } from './CardDescriotion.types';
+import { CardStyled, HeaderStyled } from './CardDescriptionStyled';
 
-import { CardStyled, HeaderStyled } from './CardComponentsStyled';
-
-interface CartDescriptionProps {
-  header: string,
-  children : React.ReactNode,
-}
-function CardDescription({ header, children }: CartDescriptionProps) {
+export function CardDescription({ header, children }: CartDescriptionProps) {
   const divRef = useRef(null);
   const headerRef = useRef(null);
   const descriptionRef = useRef(null);
@@ -51,4 +47,3 @@ function CardDescription({ header, children }: CartDescriptionProps) {
     </CardStyled>
   );
 }
-export default CardDescription;
