@@ -8,7 +8,7 @@ export function PanelRow({ warriorsType, playerType, power }: PanelRowProps) {
   return (
     <>
       <Circle playerType={playerType}>{power}</Circle>
-      <SpecialCardsPart />
+      <SpecialCardsPart highlighted={false} />
       <CardsRow>
         { warriorsType }
       </CardsRow>
