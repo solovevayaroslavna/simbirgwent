@@ -1,6 +1,6 @@
-import { Fraction, Type } from '../../Player.types';
+import { Fraction, PlayerType } from '../../Player.types';
 
 export type PlayerImageProps = {
   fraction: Fraction;
-  type: Type;
+  type: PlayerType;
 };
