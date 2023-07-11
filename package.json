@@ -33,11 +33,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
-    "prepare": "husky install"
+    "prepare": "husky install",
   },
   "husky": {
     "hooks": {
-      "commit-msg": "git rev-parse --no-revs --no-verify MERGE_HEAD || npm run commit-msg"
+      "commit-msg": "npm run commit-msg"
     }
   },
   "eslintConfig": {
