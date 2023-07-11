@@ -18,7 +18,6 @@ export const LeftIndicatorsContainerStyled = styled.div`
   gap: 10%;
   //т.к height/width = 15/8, то для того чтобы получить ширину, такую же как высоту, нужно умножить на 15/8
   width: calc(15*15%/8);
-  z-index:10;
 `;
 
 export const DownIndicatorsContainerStyled = styled.div`
@@ -43,6 +42,7 @@ export const IndicatorStyled = styled.div <{ fs: number, minimized: boolean }>`
   background-color: var(--color-text-main);
   color: var(--color-text-second);
   font-weight: bold;
+  z-index: var(--z-index-indicator);
 `;
 
 export const PowerIndicatorStyled = styled.div<{ minimized?: boolean }>`
@@ -55,6 +55,7 @@ export const PowerIndicatorStyled = styled.div<{ minimized?: boolean }>`
   border : 0.1px solid var(--color-black);
   background-color: var(--color-text-main);
   color: var(--color-text-second);
+  z-index: var(--z-index-indicator);
 `;
 
 export const TypeIndicatorStyled = styled.div<{ minimized?: boolean }>`
@@ -67,6 +68,7 @@ export const TypeIndicatorStyled = styled.div<{ minimized?: boolean }>`
   border-radius: 50%;
   border : 0.1px solid var(--color-black);
   color: var(--color-text-second);
+  z-index: var(--z-index-indicator);
 `;
 
 export const AbilityStyled = styled.div<{ minimized?: boolean }>`
@@ -79,6 +81,7 @@ export const AbilityStyled = styled.div<{ minimized?: boolean }>`
   border : 0.1px solid var(--color-black);
   background-color: var(--color-text-main);
   color: var(--color-text-second);
+  z-index: var(--z-index-indicator);
 `;
 
 export const ImgContainer = styled.div <{ backgroundImage: string }>`
@@ -112,7 +115,7 @@ export const TypeOfArmyStyled = styled.div`
   width: 80%;
   background-color: red;
   height: 90%;
-  z-index:-1;
+  z-index: var(--z-index-background);
 `;
 
 export const CardStyled = styled(Card)`
