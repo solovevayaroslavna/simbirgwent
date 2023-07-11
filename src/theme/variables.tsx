@@ -9,6 +9,8 @@ export const colors: Record<string, string> = {
   gameAreaCircleBlockBackgroundColor: '#8D5120',
   cardsListBackgroundColor: '#481601',
   gameAreaBackgroundColor: '#503017',
+  gameAreaCircleOpponentColor: '#7ABDCB',
+  gameAreaCirclePlayerColor: '#C7993F',
   playerCardColor: '#0A0505',
   playerCardFontColor: '#DFA800',
   playerCardAliveColor: '#ff004b',

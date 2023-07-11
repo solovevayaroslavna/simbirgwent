@@ -2,24 +2,27 @@ import React from 'react';
 import { GameBoardPart } from './GameBoardPart';
 import { GameAreaWrapper } from './GameAreaWrapper';
 import { GameBoardSepatator } from './GameBoardSeparator/GameBoardSeparator';
+import { PlayerType, RowType } from './Player.types';
+import { Warriors } from './Warriors';
 
-const elementsEnemy = [
-  { id: 'enemyFirst', value: 0 },
-  { id: 'enemySecond', value: 0 },
-  { id: 'enemyThird', value: 0 },
+const elementsOpponent: RowType[] = [
+  { warriorsType: Warriors.artillery, value: 2 },
+  { warriorsType: Warriors.archers, value: 3 },
+  { warriorsType: Warriors.swordsmen, value: 8 },
 ];
-const elementsFriendly = [
-  { id: 'friendlyFirst', value: 0 },
-  { id: 'friendlySecond', value: 0 },
-  { id: 'friendlyThird', value: 0 },
+
+const elementsPlayer: RowType[] = [
+  { warriorsType: Warriors.artillery, value: 12 },
+  { warriorsType: Warriors.archers, value: 4 },
+  { warriorsType: Warriors.swordsmen, value: 10 },
 ];
 
 export function GameBoard() {
   return (
     <GameAreaWrapper>
-      <GameBoardPart elements={elementsEnemy} />
+      <GameBoardPart type={PlayerType.opponent} elements={elementsOpponent} />
       <GameBoardSepatator />
-      <GameBoardPart elements={elementsFriendly} />
+      <GameBoardPart type={PlayerType.player} elements={elementsPlayer} />
     </GameAreaWrapper>
   );
 }
