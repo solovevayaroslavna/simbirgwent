@@ -34,13 +34,18 @@ function CardDescription({ header, children }: CartDescriptionProps) {
 
   useEffect(() => {
     const div = divRef.current;
-    const observer = new ResizeObserver(() => {
-      calculateFontSize(headerRef);
-      calculateFontSize(descriptionRef);
-    });
+    let rafId;
+    const handleResize = () => {
+      rafId = window.requestAnimationFrame(() => {
+        calculateFontSize(headerRef);
+        calculateFontSize(descriptionRef);
+      });
+    };
+    const observer = new ResizeObserver(handleResize);
     observer.observe(div);
     return () => {
       observer.unobserve(div);
+      window.cancelAnimationFrame(rafId);
     };
   }, []);
 
