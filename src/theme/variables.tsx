@@ -11,4 +11,8 @@ export const colors: Record<string, string> = {
   gameAreaBackgroundColor: '#503017',
   gameAreaCircleOpponentColor: '#7ABDCB',
   gameAreaCirclePlayerColor: '#C7993F',
+  playerCardColor: '#0A0505',
+  playerCardFontColor: '#DFA800',
+  playerCardAliveColor: '#ff004b',
+  playerCardDeadColor: '#693103',
 };

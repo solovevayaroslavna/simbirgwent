@@ -7,5 +7,4 @@ export const GameCardAreaWrapper = styled.div`
   background-image: url(${gameCardAreaImg});
   background-size: cover;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
 `;
