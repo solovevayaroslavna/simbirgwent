@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+local_branch_name="$(git rev-parse --abbrev-ref HEAD)"
+
+message="$(cat $1)"
+requiredPattern="(\[$local_branch_name\]: (feat|fix|refactor)/.*$)|(m|M)erge .*$"
+if ! [[ $message =~ $requiredPattern ]];
+then
+  echo $letters
+  echo "-"
+  echo "-"
+  echo "-"
+  echo "🚨 Wrong commit message! 😕"
+  echo "The commit message must have this format:"
+  echo "[<local branch name>]: <type of changes>/<what was done>"
+  echo "Allowed types of changes: feat, fix, refactor"
+  echo "Example: [T-123-creating-button]: feat/adding some features"
+  echo "-"
+  echo "Your commit message was:"
+  echo $message
+  echo "-"
+  echo "For more information, check script in .husky/commit-msg"
+  echo "-"
+  exit 1
+fi
