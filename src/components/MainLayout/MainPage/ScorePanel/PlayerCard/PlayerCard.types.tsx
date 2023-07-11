@@ -1,4 +1,4 @@
-import { Fraction, Type } from '../Player.types';
+import { Fraction, PlayerType } from '../Player.types';
 
 export type Gamer = {
   gamerName: string,
@@ -13,5 +13,5 @@ export type DeckObject = {
 
 export type PlayerCardProps = {
   gamer: Gamer,
-  type: Type,
+  playerType: PlayerType,
 };

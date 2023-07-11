@@ -3,7 +3,7 @@ export enum Fraction {
   monsters = 'MONSTERS',
 }
 
-export enum Type {
-  player,
-  opponent,
+export enum PlayerType {
+  frienly,
+  enemy,
 }
