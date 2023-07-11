@@ -37,7 +37,7 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "git rev-parse -q --no-revs --verify MERGE_HEAD || npm run commit-msg"
+      "commit-msg": "git rev-parse -q --no-revs --no-verify MERGE_HEAD || npm run commit-msg"
     }
   },
   "eslintConfig": {
