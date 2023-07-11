@@ -15,6 +15,18 @@ interface CardMinimizedProps {
 }
 
 export function CardMinimized(props : CardMinimizedProps) {
+  const makeZIndexes = (layers: string[]) => layers.reduce((agg, layerName, index) => {
+    const valueName = `z-index-${layerName}`;
+    return { ...agg, [valueName]: index * 100 };
+  }, {});
+
+  const Z_INDEX_LAYERS = ['background', 'indicator'];
+  const zIndexes = makeZIndexes(Z_INDEX_LAYERS);
+
+  const styleString = Object.entries(zIndexes)
+    .map(([name, value]) => `--${name}: ${value}; `)
+    .join('');
+  document.getElementById('root').setAttribute('style', styleString);
   const { card } = props;
   const {
     image, power,
