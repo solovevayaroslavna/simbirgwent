@@ -3,7 +3,7 @@ import { ScorePanelStyled } from './ScorePanelStyled';
 import { PlayerCard } from './PlayerCard';
 import { LeaderCard } from './LeaderCard';
 import { CenterPanel } from './CenterPanel';
-import { Fraction, Type } from './Player.types';
+import { Fraction, PlayerType } from './Player.types';
 
 export function ScorePanel() {
   const player1 = {
@@ -25,9 +25,9 @@ export function ScorePanel() {
   return (
     <ScorePanelStyled>
       <LeaderCard />
-      <PlayerCard gamer={player1} type={Type.opponent} />
+      <PlayerCard gamer={player1} playerType={PlayerType.enemy} />
       <CenterPanel />
-      <PlayerCard gamer={player2} type={Type.player} />
+      <PlayerCard gamer={player2} playerType={PlayerType.frienly} />
       <LeaderCard />
     </ScorePanelStyled>
   );
