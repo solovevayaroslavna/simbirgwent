@@ -3,7 +3,7 @@ import { ShieldImageStyled } from './ShieldImageStyled';
 import monstersPic from '../../../../../../../assets/playerCard/monsters-shield.png';
 import northPic from '../../../../../../../assets/playerCard/north-kingdoms-shield.png';
 import { ShieldImageProps } from './ShieldImage.types';
-import { Type } from '../../../Player.types';
+import { PlayerType } from '../../../Player.types';
 
 export function ShieldImage({ fraction, type }: ShieldImageProps) {
   let path: String = '';
@@ -14,10 +14,10 @@ export function ShieldImage({ fraction, type }: ShieldImageProps) {
   }
 
   let typeName: String = '';
-  if (type === Type.opponent) {
-    typeName = 'opponent';
+  if (type === PlayerType.enemy) {
+    typeName = 'enemy';
   } else {
-    typeName = 'player';
+    typeName = 'friendly';
   }
 
   return (
