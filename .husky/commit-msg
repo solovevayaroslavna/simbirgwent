@@ -7,7 +7,6 @@ message="$(cat $1)"
 requiredPattern="(\[$local_branch_name\]: (feat|fix|refactor)/.*$)|(m|M)erge .*$"
 if ! [[ $message =~ $requiredPattern ]];
 then
-  echo $letters
   echo "-"
   echo "-"
   echo "-"
