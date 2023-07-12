@@ -1,21 +1,20 @@
 import React from 'react';
 import '../../../theme/colors.css';
-import CardDescription from './CardDescription';
 import { IndicatorsContainer } from './IndicatorsContainer';
 import { CostIndicator } from './CostIndicator';
 import { ArmyCard, WeatherCard } from './Card.types';
 import {
-  CardBody, TypeIndicatorStyled, ImgContainer, CardWrapper,
-  AbilityStyled, TypeOfArmyStyled, PowerIndicatorStyled,
+  CardBodyMinimized, TypeIndicatorStyled, DownIndicatorsContainerStyled,
+  ImgContainer, CardWrapper, AbilityStyled, PowerIndicatorStyled,
 } from './CardComponentsStyled';
 import img from '../../../images/cards/bow.svg';
 import img2 from '../../../images/cards/support.svg';
 
-interface CardProps {
+interface CardMinimizedProps {
   card: ArmyCard | WeatherCard;
 }
 
-export function Card(props : CardProps) {
+export function CardMinimized(props : CardMinimizedProps) {
   const makeZIndexes = (layers: string[]) => layers.reduce((agg, layerName, index) => {
     const valueName = `z-index-${layerName}`;
     return { ...agg, [valueName]: index * 100 };
@@ -30,36 +29,34 @@ export function Card(props : CardProps) {
   document.getElementById('root').setAttribute('style', styleString);
   const { card } = props;
   const {
-    image, power, header, text,
+    image, power,
   } = card;
   return (
     <CardWrapper>
-      <CardBody backgroundImage={image}>
+      <CardBodyMinimized backgroundImage={image}>
         <IndicatorsContainer>
           {typeof power === 'string'
             ? (
-              <PowerIndicatorStyled>
+              <PowerIndicatorStyled minimized>
                 <ImgContainer backgroundImage={power} />
               </PowerIndicatorStyled>
-            ) : <CostIndicator minimized={false}>{power}</CostIndicator>}
+            ) : <CostIndicator minimized>{power}</CostIndicator>}
+        </IndicatorsContainer>
+        <DownIndicatorsContainerStyled>
           {Object.prototype.hasOwnProperty.call(card, 'category')
             && (
-              <>
-                <TypeIndicatorStyled>
-                  <ImgContainer backgroundImage={img} />
-                </TypeIndicatorStyled>
-                <TypeOfArmyStyled />
-              </>
-            )}
+              <TypeIndicatorStyled minimized>
+                <ImgContainer backgroundImage={img} />
+              </TypeIndicatorStyled>
+            ) }
           {Object.prototype.hasOwnProperty.call(card, 'ability')
-            && (
-              <AbilityStyled>
-                <ImgContainer backgroundImage={img2} />
-              </AbilityStyled>
-            )}
-        </IndicatorsContainer>
-      </CardBody>
-      <CardDescription header={header}>{text}</CardDescription>
+           && (
+           <AbilityStyled minimized>
+             <ImgContainer backgroundImage={img2} />
+           </AbilityStyled>
+           )}
+        </DownIndicatorsContainerStyled>
+      </CardBodyMinimized>
     </CardWrapper>
   );
 }

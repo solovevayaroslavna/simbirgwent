@@ -1,24 +1,16 @@
 import hero1 from '../images/cards/hero1.jpg';
 import hero2 from '../images/cards/hero2.jpg';
-
-export interface ICard {
-  id:number,
-  amount:number,
-  ability:number,
-  power:number,
-  category:number,
-  header:string,
-  text:string,
-  image:string,
-}
+import snowflake from '../images/cards/powers/snowflake.svg';
+import snow from '../images/cards/snow.jpg';
+import { ArmyCard, WeatherCard } from '../components/Shared/Card/Card.types';
 
 function createCards() {
-  const cards:ICard[] = [
+  const cards:(ArmyCard | WeatherCard)[] = [
     {
       id: 1,
       amount: 4,
       ability: 1,
-      power: 11,
+      power: 7,
       category: 1,
       header: 'Гребанная пехтура капитана',
       text: 'Пожертвуйте грошик ветерану Бренны',
@@ -28,7 +20,7 @@ function createCards() {
       id: 2,
       amount: 2,
       ability: 2,
-      power: 2,
+      power: 1,
       category: 1,
       header: 'Реданский пехотинец',
       text: 'Ради Реданни я пойду на все! Пока мне платят жалование',
@@ -38,7 +30,7 @@ function createCards() {
       id: 3,
       amount: 2,
       ability: 2,
-      power: 2,
+      power: 1,
       category: 1,
       header: 'Реданский пехотинец',
       text: 'Ради Реданни я пойду на все! Пока мне платят жалование',
@@ -48,7 +40,7 @@ function createCards() {
       id: 4,
       amount: 2,
       ability: 2,
-      power: 2,
+      power: 1,
       category: 1,
       header: 'Реданский пехотинец',
       text: 'Ради Реданни я пойду на все! Пока мне платят жалование',
@@ -58,7 +50,7 @@ function createCards() {
       id: 5,
       amount: 2,
       ability: 2,
-      power: 2,
+      power: 1,
       category: 1,
       header: 'Реданский пехотинец',
       text: 'Ради Реданни я пойду на все! Пока мне платят жалование',
@@ -68,7 +60,7 @@ function createCards() {
       id: 6,
       amount: 4,
       ability: 1,
-      power: 11,
+      power: 7,
       category: 1,
       header: 'Гребанная пехтура капитана',
       text: 'Пожертвуйте грошик ветерану Бренны',
@@ -78,41 +70,39 @@ function createCards() {
       id: 7,
       amount: 4,
       ability: 1,
-      power: 11,
+      power: 7,
       category: 1,
       header: 'Гребанная пехтура капитана',
       text: 'Пожертвуйте грошик ветерану Бренны',
       image: `${hero1}`,
     },
     {
-      id: 6,
+      id: 8,
       amount: 4,
       ability: 1,
-      power: 11,
+      power: 7,
       category: 1,
       header: 'Гребанная пехтура капитана',
       text: 'Пожертвуйте грошик ветерану Бренны',
       image: `${hero1}`,
     },
     {
-      id: 7,
+      id: 9,
       amount: 4,
       ability: 1,
-      power: 11,
+      power: 7,
       category: 1,
       header: 'Гребанная пехтура капитана',
       text: 'Пожертвуйте грошик ветерану Бренны',
       image: `${hero1}`,
     },
     {
-      id: 7,
+      id: 10,
       amount: 4,
-      ability: 1,
-      power: 11,
-      category: 1,
-      header: 'Гребанная пехтура капитана',
-      text: 'Пожертвуйте грошик ветерану Бренны',
-      image: `${hero1}`,
+      power: snowflake,
+      header: 'Мороз',
+      text: 'Мечта хорошего командира... кошмар плохого',
+      image: `${snow}`,
     },
   ];
   return cards;

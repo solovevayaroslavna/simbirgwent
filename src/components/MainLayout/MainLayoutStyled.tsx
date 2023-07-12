@@ -5,4 +5,5 @@ export const MainLayoutStyled = styled.div`
     width: 100%;   
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 `;
