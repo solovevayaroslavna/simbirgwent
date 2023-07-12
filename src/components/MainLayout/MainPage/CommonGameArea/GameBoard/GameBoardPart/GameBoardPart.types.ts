@@ -1,8 +1,6 @@
-export interface Element {
-  id: string;
-  value: number;
-}
+import { PlayerType, RowType } from '../Player.types';
 
 export interface GameBoardPartProps {
-  elements: Element[];
+  elements: RowType[];
+  type: PlayerType;
 }
