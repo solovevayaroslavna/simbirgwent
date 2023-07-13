@@ -5,14 +5,14 @@ import { PlayerImage } from './PlayerImage';
 import { InfoWrapper } from './InfoWrapper';
 import { PlayerInfo } from './PlayerInfo';
 import { PlayerDeckInfo } from './PlayerDeckInfo';
-import { Type } from '../Player.types';
+import { PlayerType } from '../Player.types';
 
-export function PlayerCard({ gamer, type }: PlayerCardProps) {
+export function PlayerCard({ gamer, playerType }: PlayerCardProps) {
   return (
-    <PlayerCardStyled type={type}>
-      <PlayerImage fraction={gamer.deck.nameOfDeck} type={type} />
+    <PlayerCardStyled playerType={playerType}>
+      <PlayerImage fraction={gamer.deck.nameOfDeck} type={playerType} />
       <InfoWrapper>
-        {type === Type.opponent
+        {playerType === PlayerType.enemy
           ? (
             <>
               <PlayerDeckInfo gamerDeckInfo={{

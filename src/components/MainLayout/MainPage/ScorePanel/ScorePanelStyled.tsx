@@ -8,8 +8,8 @@ export const ScorePanelStyled = styled.div`
     "enemyLeaderCard"
     "enemyPlayerCard"
     "centerPanel"
-    "playerPlayerCard"
-    "playerLeaderCard";
+    "friendlyPlayerCard"
+    "friendlyLeaderCard";
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;

@@ -1,16 +1,17 @@
 import React from 'react';
-import { Circle } from './Circle';
-import { CardsRow } from './CardsRow';
 import { GameBoardPartProps } from './GameBoardPart.types';
+import { PanelRow } from './PanelRow';
 
-export function GameBoardPart({ elements }: GameBoardPartProps) {
+export function GameBoardPart({ elements, type }: GameBoardPartProps) {
   return (
     <>
       {elements.map((element) => (
-        <React.Fragment key={element.id}>
-          <Circle>{element.value}</Circle>
-          <CardsRow />
-        </React.Fragment>
+        <PanelRow
+          key={element.warriorsType}
+          power={element.value}
+          playerType={type}
+          warriorsType={element.warriorsType}
+        />
       ))}
     </>
   );

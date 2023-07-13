@@ -6,67 +6,88 @@ import '../../../theme/colors.css';
 
 export const CardWrapper = styled(Box)`
   height: 100%;
-  width: 100%;//если указать 13% то будет выглядеть нормально, но надо создавать контейнер с пропорциями 15/8
+  width: 100%;
+  position: relative;
 `;
 
-export const IndicatorsContainerStyled = styled.div`
+export const LeftIndicatorsContainerStyled = styled.div`
   position: relative;
   height: 100%;
-  //т.к height/width = 15/8, то для того чтобы получить ширину, такую же как высоту, нужно умножить на 15/8\`
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  //т.к height/width = 15/8, то для того чтобы получить ширину, такую же как высоту, нужно умножить на 15/8
   width: calc(15*15%/8);
 `;
 
-export const IndicatorStyled = styled.div <{ fs: number, }>`
+export const DownIndicatorsContainerStyled = styled.div`
   position: absolute;
+  height: 15%;
+  width: 100%;
+  top: 80%;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10%;
+`;
+
+export const IndicatorStyled = styled.div <{ fs: number, minimized: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 0;
-  height: 18%;
-  width: 100%;
+  height: ${(props) => (props.minimized ? '15%' : '18%')};
+  width: '100%';
   font-size: ${(props) => `${props.fs}px`};
   border-radius: 50%;
   border : 0.1px solid var(--color-black);
   background-color: var(--color-text-main);
   color: var(--color-text-second);
-  z-index:1;
+  font-weight: bold;
+  z-index: var(--z-index-indicator);
 `;
 
-export const TypeIndicatorStyled = styled.div`
-  position: absolute;
+export const PowerIndicatorStyled = styled.div<{ minimized?: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 30%;
-  height: 18%;
-  width: 100%;
-  background-color: var(--background-type);
-  border-radius: 50%;
-  border : 0.1px solid var(--color-black);
-  color: var(--color-text-second);
-  z-index:1;
-`;
-
-export const AbilityStyled = styled.div`
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 55%;
-  height: 18%;
-  width: 100%;
+  height: ${(props) => (props.minimized ? '15%' : '18%')};
+  width: '100%';
   border-radius: 50%;
   border : 0.1px solid var(--color-black);
   background-color: var(--color-text-main);
   color: var(--color-text-second);
-  z-index:1;
+  z-index: var(--z-index-indicator);
+`;
+
+export const TypeIndicatorStyled = styled.div<{ minimized?: boolean }>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: ${(props) => (props.minimized ? '100%' : '18%')};
+  width: ${(props) => (props.minimized ? 'calc(15*15%/8)' : '100%')};
+  background-color: var(--background-type);
+  border-radius: 50%;
+  border : 0.1px solid var(--color-black);
+  color: var(--color-text-second);
+  z-index: var(--z-index-indicator);
+`;
+
+export const AbilityStyled = styled.div<{ minimized?: boolean }>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: ${(props) => (props.minimized ? '100%' : '18%')};
+  width: ${(props) => (props.minimized ? 'calc(15*15%/8)' : '100%')};
+  border-radius: 50%;
+  border : 0.1px solid var(--color-black);
+  background-color: var(--color-text-main);
+  color: var(--color-text-second);
+  z-index: var(--z-index-indicator);
 `;
 
 export const ImgContainer = styled.div <{ backgroundImage: string }>`
-  height: 90%;
-  // т.к height/width = 15/8, то для того чтобы получить ширину, такую же как высоту, нужно умножить на 15/8
-  width: calc(15*25%/8);
-  background: url(${(props) => props.backgroundImage}) 50% 60% no-repeat;
+  height: 80%;
+  width: 80%;
+  background: url(${(props) => props.backgroundImage}) 60% 60% no-repeat;
   background-size: contain;
 `;
 
@@ -78,6 +99,15 @@ export const CardBody = styled.div <{ backgroundImage: string }>`
   background-size: cover;
 `;
 
+export const CardBodyMinimized = styled.div <{ backgroundImage: string }>`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url(${(props) => props.backgroundImage}) no-repeat;
+  background-size: cover;
+`;
+
 export const TypeOfArmyStyled = styled.div`
   position: absolute;
   top: 10%;
@@ -85,6 +115,7 @@ export const TypeOfArmyStyled = styled.div`
   width: 80%;
   background-color: red;
   height: 90%;
+  z-index: var(--z-index-background);
 `;
 
 export const CardStyled = styled(Card)`
