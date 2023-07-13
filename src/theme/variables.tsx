@@ -15,4 +15,6 @@ export const colors: Record<string, string> = {
   playerCardFontColor: '#DFA800',
   playerCardAliveColor: '#ff004b',
   playerCardDeadColor: '#693103',
+  weatherDeckBackgroundColor: '#1C1B18',
+  weatherColor: '#f0EDE4',
 };
